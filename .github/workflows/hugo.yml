@@ -39,6 +39,7 @@ jobs:
         run: |
           ls -la Note-repo          
           cp -r Note-repo/* content/posts
+          cp Note-repo/Linux/Comandos.md content/posts
       - name: Setup Go
         uses: actions/setup-go@v6
         with:
