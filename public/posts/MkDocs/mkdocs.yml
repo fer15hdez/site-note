@@ -1,0 +1,63 @@
+site_name: Mis Notas Tech
+site_description: Notas públicas sincronizadas desde mi repo
+repo_url: https://github.com/USUARIO/REPO
+docs_dir: 'Note'
+theme:
+  name: material
+  palette:
+    # Activa el modo oscuro y lo establece como el predeterminado
+    scheme: 'slate'
+    # 'primary' y 'accent' definen los colores de la interfaz
+    primary: 'blue'
+    accent: 'light blue'
+
+markdown_extensions:
+  - pymdownx.highlight:
+      # Habilita el coloreado de líneas
+      linenums: true
+      # El estilo del resaltado (monokai es similar al de la imagen)
+      pygments_style: 'monokai'
+  # Habilita los bloques de código con el lenguaje en la primera línea
+  - pymdownx.superfences    
+
+plugins:
+  - search  
+nav:
+  - Home: 'README.md'
+  - AWS:
+    - EC2: 'AWS/EC2/EC2.md'
+    - S3: 'AWS/S3/S3.md'
+  - DataBase:
+    - NoSQL:
+      - MongoDB: 'DataBase/NoSQL/mongoDB.md'
+    - Relational:
+      - MySQL: 'DataBase/Relational/MySQL/config.md'
+      - PostgreSQL: 'DataBase/Relational/PostgreSQL/postgrisql.md'
+  - Django:
+    - Django: 'Django/Django.md'
+    - 'Partitioned table in postgres': 'Django/Partitioned table in postgres.md'
+  - Docker: 'Docker/Docker.md'
+  - Git: 'Git/Git.md'
+  - Python:
+    - Python: 'PYTHON/python.md'
+    - 'Virtual Environment': 'PYTHON/virtual enviroment.md'
+  - Linux:
+    - '50 comandos linux': 'Linux/50 comandos linux.md'
+    - Comandos: 'Linux/Comandos.md'
+    - 'Limitar ancho de banda': 'Linux/Limitar ancho de banda.md'
+    - 'Limitar uso cpu y ram': 'Linux/Limitar uso cpu y ram en servicio.md'
+    - 'Convertir pst a mbox': 'Linux/convertir pst a mbox.md'
+    - wget: 'Linux/wget.md'
+    - Crontab: 'Linux/crontab/crontab.md'
+  - MarkDown:
+    - Sintaxis: 'MarkDown/sintaxis.md'
+  - JS: 'JS/js.md'
+  - Java:
+    - Java: 'Java/Java.md'
+    - Spring Boot:
+      - 'Lombok y MapStruct': 'Java/Spring Boot/Lombok-MapStruct.md'
+      - 'Spring Boot': 'Java/Spring Boot/springBoot.md'
+  - CSS:
+    - Cascade: 'CSS/cascade.md'
+  - Golang: 'Goland/Golang.md'
+

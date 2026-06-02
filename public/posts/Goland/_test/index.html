@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title> - My New Hugo Site</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://example.org/posts/goland/_test/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="My New Hugo Site">
+  <meta property="og:description" content="TEST La Regla de Oro Un test es código que ejecuta otro código y afirma (asegura) que el resultado es correcto. Terminología Clave Aserción (Assertion/Affirmation): El punto central del test. Es una llamada a una función (ej. assert.Equal(esperado, actual)) que verifica una condición. Si la condición es falsa, el test falla.
+Fixture: Es el entorno o conjunto de datos preconfigurados que se necesitan para ejecutar un test (ej. un usuario, una conexión a base de datos, un archivo temporal).">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="og:image" content="https://example.org/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://example.org/logo.png">
+  <meta name="twitter:title" content="My New Hugo Site">
+  <meta name="twitter:description" content="TEST La Regla de Oro Un test es código que ejecuta otro código y afirma (asegura) que el resultado es correcto. Terminología Clave Aserción (Assertion/Affirmation): El punto central del test. Es una llamada a una función (ej. assert.Equal(esperado, actual)) que verifica una condición. Si la condición es falsa, el test falla.
+Fixture: Es el entorno o conjunto de datos preconfigurados que se necesitan para ejecutar un test (ej. un usuario, una conexión a base de datos, un archivo temporal).">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.org/posts/goland/_test/" /><link rel="prev" href="https://example.org/posts/goland/golang/" /><link rel="next" href="https://example.org/posts/docker/docker/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.org\/posts\/goland\/_test\/"
+        },"genre": "posts","wordcount":  595 ,
+        "url": "https:\/\/example.org\/posts\/goland\/_test\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Fernando Velazquez"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My New Hugo Site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My New Hugo Site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX"></h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;595 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#la-regla-de-oro">La Regla de Oro</a></li>
+    <li><a href="#terminología-clave">Terminología Clave</a></li>
+    <li><a href="#tipos-de-tests-jerarquía-piramidal">Tipos de Tests (Jerarquía Piramidal)</a>
+      <ul>
+        <li><a href="#tests-unitarios-unit-tests--los-más-usados">Tests Unitarios (Unit Tests) 🧪 (Los más usados)</a></li>
+        <li><a href="#tests-de-integración-integration-tests-">Tests de Integración (Integration Tests) 🔗</a></li>
+      </ul>
+    </li>
+    <li><a href="#tests-de-extremo-a-extremo-end-to-end-o-e2e--los-menos-usados">Tests de Extremo a Extremo (End-to-End o E2E) 🛣️ (Los menos usados)</a></li>
+    <li><a href="#testing-específico-en-go-go-testing">Testing Específico en Go (Go Testing)</a>
+      <ul>
+        <li><a href="#funciones">Funciones</a></li>
+      </ul>
+    </li>
+    <li><a href="#tests-basados-en-tablas-table-driven-tests">Tests Basados en Tablas (Table Driven Tests)</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="test">TEST</h1>
+<h2 id="la-regla-de-oro">La Regla de Oro</h2>
+<ul>
+<li>Un test es código que ejecuta otro código y afirma (asegura) que el resultado es correcto.</li>
+</ul>
+<h2 id="terminología-clave">Terminología Clave</h2>
+<ul>
+<li>
+<p><strong>Aserción (Assertion/Affirmation</strong>): El punto central del test. Es una llamada a una función (ej. assert.Equal(esperado, actual)) que verifica una condición. Si la condición es falsa, el test falla.</p>
+</li>
+<li>
+<p><strong>Fixture</strong>: Es el entorno o conjunto de datos preconfigurados que se necesitan para ejecutar un test (ej. un usuario, una conexión a base de datos, un archivo temporal).</p>
+</li>
+<li>
+<p><strong>Cobertura de Código (Code Coverage)</strong>: Una métrica que mide la cantidad de código fuente que ha sido ejecutada por los tests. Una cobertura alta no garantiza un software libre de errores, pero indica que gran parte del código ha sido ejercitado.</p>
+</li>
+</ul>
+<h2 id="tipos-de-tests-jerarquía-piramidal">Tipos de Tests (Jerarquía Piramidal)</h2>
+<h3 id="tests-unitarios-unit-tests--los-más-usados">Tests Unitarios (Unit Tests) 🧪 (Los más usados)</h3>
+<ul>
+<li><strong>Propósito</strong>: Probar las unidades de código más pequeñas y aisladas (funciones, métodos, structs) de forma individual.</li>
+<li><strong>Objetivo</strong>: Verificar la lógica interna y asegurar que el componente funciona correctamente de forma aislada.</li>
+<li><strong>Características</strong>: Son los más rápidos de ejecutar y deben tener la mayor cobertura.</li>
+<li><strong>Aislamiento</strong>: Deben estar completamente aislados de dependencias externas (bases de datos, APIs externas, sistemas de archivos). Esto se logra usando Mocks o Stubs.</li>
+</ul>
+<h3 id="tests-de-integración-integration-tests-">Tests de Integración (Integration Tests) 🔗</h3>
+<ul>
+<li><strong>Propósito</strong>: Probar la interacción entre dos o más unidades o componentes (ej. un servicio y una base de datos, o dos microservicios).</li>
+<li><strong>Objetivo</strong>: Verificar que las partes del sistema funcionan correctamente cuando se unen.</li>
+<li><strong>Características</strong>: Son más lentos que los unitarios porque involucran recursos reales.</li>
+</ul>
+<h2 id="tests-de-extremo-a-extremo-end-to-end-o-e2e--los-menos-usados">Tests de Extremo a Extremo (End-to-End o E2E) 🛣️ (Los menos usados)</h2>
+<h2 id="testing-específico-en-go-go-testing">Testing Específico en Go (Go Testing)</h2>
+<ul>
+<li>El archivo donde se implementa el test debe terminar en <code>_test.go</code>.</li>
+<li>El archivo de test puede estar en el mismo paquete que el código que prueba (ej. package main) o en un paquete separado (ej. package main_test), lo cual es útil para probar solo la interfaz pública.</li>
+<li><code>go test</code> ejecuta todos los archivos terminados en <code>_test.go</code></li>
+<li><code>go test ./...</code>: Ejecuta los tests de forma recursiva en todos los subdirectorios.</li>
+<li><code>go test -v</code>: Muestra una salida verbosa, incluyendo los tests que pasaron.</li>
+<li><code>go test -run NombreDeTest:</code> Ejecuta solo los tests cuyo nombre coincide con el patrón especificado (útil para ejecutar un subconjunto de tests).</li>
+<li><code>go test -cover</code>: Muestra el porcentaje de cobertura de código.</li>
+</ul>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-go">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">  <span class="c1">// La estructura del nombre es TestNombreFuncion con el parametro (t *testing.T)</span>
+</span></span><span class="line"><span class="cl">   <span class="kd">func</span> <span class="nf">TestNombreFuncion</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{}</span></span></span></code></pre></div></div>
+<h3 id="funciones">Funciones</h3>
+<ul>
+<li><code>t.Fail()</code>: Indica que el test ha fallado, pero continúa la ejecución del test.	No detiene la función.</li>
+<li><code>t.Errorf(...)</code>: Combina t.Logf() y t.Fail(). Registra el error y el test falla.	No detiene la función.</li>
+<li><code>t.Fatal(...)</code>: Registra el error e inmediatamente detiene la ejecución del test.	Detiene la función (similar a panic).</li>
+<li><code>t.Run(...)</code>: Permite agrupar subtests dentro de un test principal (útil para pruebas basadas en tablas).	Estructura la salida y permite ejecutar tests específicos.</li>
+</ul>
+<h2 id="tests-basados-en-tablas-table-driven-tests">Tests Basados en Tablas (Table Driven Tests)</h2>
+<ul>
+<li>Esta es la técnica más usada y recomendada en Go. Consiste en definir un slice de structs (la &ldquo;tabla&rdquo;) donde cada elemento representa un caso de prueba.</li>
+</ul>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-go">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">  <span class="kd">func</span> <span class="nf">TestSuma</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// La tabla de datos</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">tests</span> <span class="o">:=</span> <span class="p">[]</span><span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">name</span>   <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">a</span>      <span class="kt">int</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">b</span>      <span class="kt">int</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">esperado</span> <span class="kt">int</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}{</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span><span class="s">&#34;Positivos&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span><span class="s">&#34;Negativos&#34;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span><span class="s">&#34;Cero&#34;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">tt</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">tests</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">t</span><span class="p">.</span><span class="nf">Run</span><span class="p">(</span><span class="nx">tt</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="kd">func</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// tt.name se usa para el t.Run</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">resultado</span> <span class="o">:=</span> <span class="nf">Suma</span><span class="p">(</span><span class="nx">tt</span><span class="p">.</span><span class="nx">a</span><span class="p">,</span> <span class="nx">tt</span><span class="p">.</span><span class="nx">b</span><span class="p">)</span> <span class="c1">// se ejecuta la funcion suma que es la se esta probando.</span>
+</span></span><span class="line"><span class="cl">          <span class="k">if</span> <span class="nx">resultado</span> <span class="o">!=</span> <span class="nx">tt</span><span class="p">.</span><span class="nx">esperado</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">              <span class="nx">t</span><span class="p">.</span><span class="nf">Errorf</span><span class="p">(</span><span class="s">&#34;Suma(%d, %d) dio %d, se esperaba %d&#34;</span><span class="p">,</span> <span class="nx">tt</span><span class="p">.</span><span class="nx">a</span><span class="p">,</span> <span class="nx">tt</span><span class="p">.</span><span class="nx">b</span><span class="p">,</span> <span class="nx">resultado</span><span class="p">,</span> <span class="nx">tt</span><span class="p">.</span><span class="nx">esperado</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 0001-01-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://example.org/posts/goland/_test/" data-title=""><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://example.org/posts/goland/_test/" data-title=""><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://example.org/posts/goland/_test/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://example.org/posts/goland/_test/" data-title=""><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://example.org/posts/goland/_test/" data-title=""><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://example.org/posts/goland/_test/" data-title=""><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://example.org/posts/goland/_test/" data-title="" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fexample.org%2fposts%2fgoland%2f_test%2f&amp;text=" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/goland/golang/" class="prev" rel="prev" title=""><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i></a>
+            <a href="/posts/docker/docker/" class="next" rel="next" title=""><i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="www.link.com" target="_blank">Fernando Velazquez</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

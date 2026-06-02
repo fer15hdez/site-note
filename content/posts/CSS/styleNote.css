@@ -1,0 +1,117 @@
+ /*Class
+ Is difined for "."
+ Can be used in every html tag and a lot of time
+   */
+   /* Example of class */
+   .nameOfClass{
+       /* attribute */
+   }
+   .clearFloat{
+    clear: both;
+}
+
+/* Applying style for id */
+#nameOfId{
+    /* attribute */
+}
+#mainSection{
+    display: flex;
+    border-width: .1em;
+    height: 90%;
+}
+
+/* Applying the same style for different tag, separate with comma*/
+p, div{
+    /* style for attribute */
+}
+/* Applying style to a tag that is inside to another tag */
+p div{
+    /* style for attribute */
+}
+
+/* Pseudo-Class */
+/* That affect the child who is with index odd(impar) and even(par)*/
+section li:nth-child(odd), section li:nth-child(even){
+    background-color: rgb(177, 142, 28);   
+    width: 250px;
+    margin: .2em;
+}
+
+/* Pseudo-Class */
+/* This affect the tag "p" when the pointer of mouse is over it*/
+p:hover{   
+    background-color: rgb(34, 139, 90);
+    transition: all 2s ease-in-out 0s;
+    transform: perspective(1500px) rotate3d(1, 5, 0, 45deg);
+
+}
+
+/* ------------------------------------------------------------- */
+/* ------BOX MODEL------ */
+/* ------------------------------------------------------------- */
+/* "Position" — Esta propiedad define el tipo de posicionamiento usado para colocar un
+elemento. Los valores disponibles son static (se posiciona de acuerdo con el flujo normal
+del documento), relative (se posiciona según la posición original del elemento),
+absolute (se posiciona con una posición absoluta relativa al contenedor del elemento), y
+fixed (se posiciona con una posición absoluta relativa a la ventana del navegador).
+ */
+/* Position ABSOLUTE */
+/* Need to be defined in the box father the attribute "Position" with the value "relative" 
+   if value is no relative, the box, take for reference the body page*/
+/* The position "Absolute" use the coordinates from inside the box father*/
+/* The box is out of design flow */
+#nameOfBoxFather{
+    position: relative;
+}
+#nameChild{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: unset;
+    bottom: unset;
+}
+/*
+- Un contenedor flexible es un elemento que convierte su contenido en cajas flexibles.
+- Para volver flexibles las cajas dentro del
+elemento <section> (sus tamaños cambian de acuerdo al espacio disponible), tenemos que
+convertir a este elemento en un contendor flexible.
+- Los valores "flex" e "inline-flex" para la propiedad display.
+-El valor flex define un elemento Block flexible y el valor inline-flex define un elemento Inline flexible.
+- flex-grow—Esta propiedad declara la proporción en la cual el elemento se va a expandir
+o encoger. La proporción se determina considerando los valores asignados al resto de los
+elementos de la caja (los elementos hermanos).
+flex-shrink—Esta propiedad declara la proporción en la que el elemento se va a reducir.
+La proporción se determina a partir de los valores asignados al resto de los elementos de la
+caja (los elementos hermanos).
+flex-basis—Esta propiedad declara un tamaño inicial para el elemento.
+flex—Esta propiedad nos permite configurar los valores de las propiedades flex-grow ,
+flex-shrink, y flex-basis al mismo tiempo.
+
+- El tamanno de cada caja se calcula: TamannoCajaPadre * valorFlexGrowCaja/sumaDeTodosValoresFlexGrowCajasDentroDePadre = TamannoCaja
+- El parámetro flex-shrink trabaja como flex-grow
+- El parámetro flex-basis establece un valor inicial para el elemento.
+- El valor del parámetro flex-basis se considera para calcular cuánto se expandirá o reducirá un elemento flexible. Cuando
+este valor es 0 o no se declara, el valor considerado es el tamaño del contenido del elemento.
+- El valor 0 asignado a los parámetros flex-grow o flex-shrink no permite que el elemento se expanda o reduzca,
+respectivamente. Para declarar flexibilidad, los valores de estos parámetros deben ser iguales o mayores que 1.
+
+
+*/
+#cajapadre {
+    display: flex;
+    width: 600px;
+    justify-content: space-around; /* Esta funcionalidad define el espacio disponible como se reparte alrededor de las cajas hijas*/
+    align-items: center; /*  Esta propiedad trabaja como justify-content pero alinea las cajas en el eje transversal. Esta característica
+        logra que la propiedad sea apropiada para realizar una alineación vertical. */
+    }  
+    /* id of boxes inside of #cajapadre */
+#caja-1 {
+    flex: 1;
+    }
+#caja-2 {
+    flex: 1;
+    }
+#caja-3 {
+    flex: 1;
+    }
+    

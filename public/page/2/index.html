@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+	<meta name="generator" content="Hugo 0.145.0">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>My New Hugo Site</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://example.org/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="My New Hugo Site">
+  <meta property="og:description" content="This is my cool site">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="https://example.org/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://example.org/logo.png">
+  <meta name="twitter:title" content="My New Hugo Site">
+  <meta name="twitter:description" content="This is my cool site">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.org/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="My New Hugo Site">
+    <link rel="feed" href="/index.xml" type="application/rss+xml" title="My New Hugo Site"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "https:\/\/example.org\/","inLanguage": "en-us","author": {
+                "@type": "Person",
+                "name": "Fernando Velazquez"
+            },"description": "This is my cool site","name": "My New Hugo Site"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My New Hugo Site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My New Hugo Site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"></div></div>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/aws/ec2/ec2/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h1 id="create-a-ec2-is-like-a-virtual-machine">Create a EC2 (is like a virtual machine)</h1>
+<h3 id="step-1-aws-account-and-ec2-instance-setup">Step 1: AWS account and EC2 instance Setup</h3>
+<p>Visit AWS Console  to create you account and log in. Now, follow simple steps to create an EC2 instance with Ubuntu 22.04 or other preferred OS.</p>
+<h4 id="step-11-select-ec2-from-aws-console-and-launch-an-instance">Step 1.1: Select EC2 from AWS Console and launch an instance</h4>
+<p>Launch is create a instance.</p>
+<h4 id="step-12-setup-and-initialize-your-instance">Step 1.2: Setup and initialize your instance</h4>
+<p>In the setup of instance <strong>is necesary to create</strong> &ldquo;un par de claves para conectarse de forma segura a la instancia&rdquo;. Is a file.<br>
+<em><strong>Need to be in a place where is posible to change the permision</strong></em>, is preference in folder home.</p></div><div class="post-footer">
+        <a href="/posts/aws/ec2/ec2/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/cms-and-builder-site/hugo/hugo/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"></div><div class="post-footer">
+        <a href="/posts/cms-and-builder-site/hugo/hugo/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/css/cascade/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h1 id="cascade">Cascade</h1>
+<h2 id="specificity">Specificity</h2>
+<p>La especificidad es el modo que tiene el navegador de decidir qué regla se aplica si diversas reglas tienen selectores diferentes pero podrían aplicarse a un mismo elemento.</p>
+<ol>
+<li>Un selector de elemento es menos específico (selecciona todos los elementos de aquel tipo que aparecen en la página) por lo que presenta una puntuación más baja en especificidad.</li>
+<li>Un selector de clase es más específico (selecciona solo los elementos de una página que tienen un valor de atributo class dado), y por tanto recibe una puntuación mayor.</li>
+</ol>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> &lt;h1 class=&#34;main-heading&#34;&gt;This is my heading.&lt;/h1&gt; </span></span></code></pre></div></div>
+<p>La clase es la que prevalece sobre el selector h1.</p></div><div class="post-footer">
+        <a href="/posts/css/cascade/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/database/nosql/mongodb/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h1 id="install-and-crud-create-read-update-delete">Install and CRUD (Create, Read, Update, Delete)</h1>
+<h2 id="install">Install</h2>
+<p><a href="https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/" target="_blank" rel="noopener noreffer ">https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/</a></p>
+<h2 id="drud-version-mongodb-7">DRUD Version mongoDB 7</h2>
+<p><a href="https://www.mongodb.com/docs/manual/crud/" target="_blank" rel="noopener noreffer ">https://www.mongodb.com/docs/manual/crud/</a></p>
+<h3 id="insert">Insert</h3>
+<p>***db.collection.insertOne() ***<br>
+<em>Example</em></p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-javascript">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">(</span> 
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="nx">item</span><span class="o">:</span> <span class="s2">&#34;card&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="nx">qty</span><span class="o">:</span> <span class="mi">15</span> <span class="p">}</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">print</span> <span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span></span></span></code></pre></div></div>
+<h4 id="insertar-un-documento-con-un-documento-embebido--detalles">Insertar un documento con un documento embebido: &ndash; detalles</h4>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-javascript">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">db</span><span class="p">.</span><span class="nx">productos</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;nombre&#34;</span><span class="o">:</span> <span class="s2">&#34;Smartphone Samsung Galaxy S23&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;precio&#34;</span><span class="o">:</span> <span class="mf">999.00</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;categoria&#34;</span><span class="o">:</span> <span class="s2">&#34;Electrónica&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;stock&#34;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;detalles&#34;</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;pantalla&#34;</span><span class="o">:</span> <span class="s2">&#34;6.1 pulgadas AMOLED&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;procesador&#34;</span><span class="o">:</span> <span class="s2">&#34;Snapdragon 8 Gen 2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;memoriaRAM&#34;</span><span class="o">:</span> <span class="s2">&#34;8GB&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span></span></span></code></pre></div></div>
+<h4 id="insertar-un-documento-con-un-array-de-valores--temas">Insertar un documento con un array de valores: &ndash; temas</h4>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-javascript">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">db</span><span class="p">.</span><span class="nx">productos</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;nombre&#34;</span><span class="o">:</span> <span class="s2">&#34;Curso de Desarrollo Web&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;precio&#34;</span><span class="o">:</span> <span class="mf">49.99</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;categoria&#34;</span><span class="o">:</span> <span class="s2">&#34;Educación&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;temas&#34;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;CSS&#34;</span><span class="p">,</span> <span class="s2">&#34;JavaScript&#34;</span><span class="p">,</span> <span class="s2">&#34;Node.js&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span></span></span></code></pre></div></div>
+<h4 id="dbcollectioninsertmany">db.collection.insertMany()</h4>
+<p><em>Example</em></p></div><div class="post-footer">
+        <a href="/posts/database/nosql/mongodb/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/database/relational/mysql/config/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h2 id="exportar-una-base-de-datos-mysql-o-mariadb">Exportar una base de datos MySQL o MariaDB</h2>
+<p><!-- raw HTML omitted -->mysqldump -u nombre_usuario -p nombre_bbdd &gt; nombre_archivo_dump.sql<!-- raw HTML omitted --></p>
+<ol>
+<li>nombre_usuario hace referencia al nombre del usuario de la base de datos.</li>
+<li>nombre_bbdd hay que sustituirlo por el nombre de la base de datos que quieres exportar.</li>
+<li>nombre_archivo_dump.sql es el archivo que se generará con toda la información de la base de datos.</li>
+</ol>
+<h4 id="export-diferent-table">Export diferent table</h4>
+<p><!-- raw HTML omitted -->mysqldump -u nombre_usuario -p nombre_bbdd nombre_tabla_1 nombre_tabla_2 nombre_tabla_3 &gt; nombre_archivo_dump.sql<!-- raw HTML omitted --></p></div><div class="post-footer">
+        <a href="/posts/database/relational/mysql/config/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/database/relational/postgresql/postgrisql/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h1 id="install">Install</h1>
+<p><em>sudo apt install postgresql postgresql-contrib</em><br>
+<em>sudo -i -u postgres</em>: (&ldquo;Change to user postgres. The user &lsquo;postgres&rsquo; is a user system&rdquo;)<br>
+<em>sudo -u postgres createuser &ndash;interactive</em>: (&ldquo;Create a new user&rdquo;)<br>
+<em>psql</em> (&ldquo;To interact with postgres console. Open the postgres terminal &ldquo;)
+<em>\q</em> (&ldquo;Exit terminal postgres&rdquo;)</p>
+<h2 id="connect-to-server-postgres">Connect to server Postgres</h2>
+<p><em>psql -h localhost -U postgres</em></p>
+<p>====</p>
+<h3 id="postgres-terminal">Postgres Terminal</h3>
+<p><em>sudo -u postgres psql</em> (&ldquo;Enter to postgres teerminal without switch to user postgres&rdquo;)
+<em>\l</em> (Te muestra las bases de datos existentes.)<br>
+<em>\connect [database_name]</em> (&ldquo;Connect to a data base&rdquo;)<br>
+<em>\d</em> (Te muestra las relaciones (tablas, secuencias, etc.) existentes en la base de datos.)   <br>
+<em>\d [nombre_tabla]</em> (Para ver la descripción (nombre de columnas, tipo de datos, etc.) de una tabla.)<br>
+<em>\c [nombre_bd]</em> (Para conectarte a otra base de datos.)<br>
+<em>SHOW search_path;</em> (Para ver la ruta de búsqueda actual.)<br>
+<em>SET search_path TO [nombre_esquema];</em> (Para actualizar la ruta de búsqueda.) <br>
+<em>\q</em> (Para salir de psql )<br>
+<em>\du</em> (List all user)</p></div><div class="post-footer">
+        <a href="/posts/database/relational/postgresql/postgrisql/">Read More</a></div>
+</article><ul class="pagination"><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/">1</a>
+                    </span>
+                </li><li class="page-item active">
+                    <span class="page-link">
+                        <a href="/page/2/">2</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/3/">3</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/4/">4</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link" aria-hidden="true">&hellip;</span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/6/">6</a>
+                    </span>
+                </li></ul></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="www.link.com" target="_blank">Fernando Velazquez</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script>window.config={"data":{"id-1":"This is my cool site"},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script src="/js/theme.min.js"></script></body>
+</html>

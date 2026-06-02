@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title> - My New Hugo Site</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://example.org/posts/database/relational/postgresql/postgrisql/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="My New Hugo Site">
+  <meta property="og:description" content="Install sudo apt install postgresql postgresql-contrib
+sudo -i -u postgres: (“Change to user postgres. The user ‘postgres’ is a user system”)
+sudo -u postgres createuser –interactive: (“Create a new user”)
+psql (“To interact with postgres console. Open the postgres terminal “) \q (“Exit terminal postgres”)
+Connect to server Postgres psql -h localhost -U postgres
+====
+Postgres Terminal sudo -u postgres psql (“Enter to postgres teerminal without switch to user postgres”) \l (Te muestra las bases de datos existentes.)
+\connect [database_name] (“Connect to a data base”)
+\d (Te muestra las relaciones (tablas, secuencias, etc.) existentes en la base de datos.) \d [nombre_tabla] (Para ver la descripción (nombre de columnas, tipo de datos, etc.) de una tabla.)
+\c [nombre_bd] (Para conectarte a otra base de datos.)
+SHOW search_path; (Para ver la ruta de búsqueda actual.)
+SET search_path TO [nombre_esquema]; (Para actualizar la ruta de búsqueda.) \q (Para salir de psql )
+\du (List all user)">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="og:image" content="https://example.org/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://example.org/logo.png">
+  <meta name="twitter:title" content="My New Hugo Site">
+  <meta name="twitter:description" content="Install sudo apt install postgresql postgresql-contrib
+sudo -i -u postgres: (“Change to user postgres. The user ‘postgres’ is a user system”)
+sudo -u postgres createuser –interactive: (“Create a new user”)
+psql (“To interact with postgres console. Open the postgres terminal “) \q (“Exit terminal postgres”)
+Connect to server Postgres psql -h localhost -U postgres
+====
+Postgres Terminal sudo -u postgres psql (“Enter to postgres teerminal without switch to user postgres”) \l (Te muestra las bases de datos existentes.)
+\connect [database_name] (“Connect to a data base”)
+\d (Te muestra las relaciones (tablas, secuencias, etc.) existentes en la base de datos.) \d [nombre_tabla] (Para ver la descripción (nombre de columnas, tipo de datos, etc.) de una tabla.)
+\c [nombre_bd] (Para conectarte a otra base de datos.)
+SHOW search_path; (Para ver la ruta de búsqueda actual.)
+SET search_path TO [nombre_esquema]; (Para actualizar la ruta de búsqueda.) \q (Para salir de psql )
+\du (List all user)">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.org/posts/database/relational/postgresql/postgrisql/" /><link rel="prev" href="https://example.org/posts/django/django/" /><link rel="next" href="https://example.org/posts/database/relational/mysql/config/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.org\/posts\/database\/relational\/postgresql\/postgrisql\/"
+        },"genre": "posts","wordcount":  315 ,
+        "url": "https:\/\/example.org\/posts\/database\/relational\/postgresql\/postgrisql\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Fernando Velazquez"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My New Hugo Site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My New Hugo Site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX"></h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;315 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#connect-to-server-postgres">Connect to server Postgres</a>
+      <ul>
+        <li><a href="#postgres-terminal">Postgres Terminal</a></li>
+        <li><a href="#database">DataBAse</a></li>
+        <li><a href="#set-and-change-password">Set and change password</a></li>
+        <li><a href="#permision-and-role">Permision and role</a></li>
+        <li><a href="#defaul-user-and-password">Defaul user and password</a></li>
+        <li><a href="#make-a-backup-to-db">Make a Backup to DB</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="install">Install</h1>
+<p><em>sudo apt install postgresql postgresql-contrib</em><br>
+<em>sudo -i -u postgres</em>: (&ldquo;Change to user postgres. The user &lsquo;postgres&rsquo; is a user system&rdquo;)<br>
+<em>sudo -u postgres createuser &ndash;interactive</em>: (&ldquo;Create a new user&rdquo;)<br>
+<em>psql</em> (&ldquo;To interact with postgres console. Open the postgres terminal &ldquo;)
+<em>\q</em> (&ldquo;Exit terminal postgres&rdquo;)</p>
+<h2 id="connect-to-server-postgres">Connect to server Postgres</h2>
+<p><em>psql -h localhost -U postgres</em></p>
+<p>====</p>
+<h3 id="postgres-terminal">Postgres Terminal</h3>
+<p><em>sudo -u postgres psql</em> (&ldquo;Enter to postgres teerminal without switch to user postgres&rdquo;)
+<em>\l</em> (Te muestra las bases de datos existentes.)<br>
+<em>\connect [database_name]</em> (&ldquo;Connect to a data base&rdquo;)<br>
+<em>\d</em> (Te muestra las relaciones (tablas, secuencias, etc.) existentes en la base de datos.)   <br>
+<em>\d [nombre_tabla]</em> (Para ver la descripción (nombre de columnas, tipo de datos, etc.) de una tabla.)<br>
+<em>\c [nombre_bd]</em> (Para conectarte a otra base de datos.)<br>
+<em>SHOW search_path;</em> (Para ver la ruta de búsqueda actual.)<br>
+<em>SET search_path TO [nombre_esquema];</em> (Para actualizar la ruta de búsqueda.) <br>
+<em>\q</em> (Para salir de psql )<br>
+<em>\du</em> (List all user)</p>
+<p><strong>Note: Is necesary the semicolon at the end of each sentence</strong><br>
+<strong>Note: In postgres a role and a user are the same</strong></p>
+<h3 id="database">DataBAse</h3>
+<p>CREATE DATABASE name_db; (&ldquo;Create a data base with name &rsquo;name_db&rsquo; &ldquo;)
+<em>drop database test;</em> (&ldquo;Delete the database&rdquo;)
+<em>SELECT pg_terminate_backend(pg_stat_activity.pid)
+FROM pg_stat_activity
+WHERE datname = &lsquo;myDataBase&rsquo;
+AND pid &lt;&gt; pg_backend_pid();</em> (&ldquo;Close all the connection to the database&rdquo;)</p>
+<h3 id="set-and-change-password">Set and change password</h3>
+<p>CREATE USER user_name WITH PASSWORD &lsquo;123admin&rsquo;; (&ldquo;Create user with password&rdquo;)
+drop user user_name; (&ldquo;Delete user&rdquo;)
+SET USER admin WITH PASSWORD &lsquo;Admin123&rsquo;; (&ldquo;From console psql&rdquo;)<br>
+ALTER USER admin WITH PASSWORD &lsquo;Admin123&rsquo;; (&ldquo;From console psql, change the password&rdquo;)</p>
+<h3 id="permision-and-role">Permision and role</h3>
+<p>GRANT name_role TO user_name; (&ldquo;Give permission to user_name on the role name_role&rdquo;)</p>
+<h3 id="defaul-user-and-password">Defaul user and password</h3>
+<p>U: postgres<br>
+P: postgres</p>
+<h3 id="make-a-backup-to-db">Make a Backup to DB</h3>
+<p><em>Is necesary to specify the host (-h)</em><br>
+<em>-W -&gt; prompt the password option</em><br>
+<em>-v -&gt; verbose option</em><br>
+<em>-U -&gt; user</em><br>
+<em>-F -&gt; format</em><br>
+pg_dump -v -U admin -W -h localhost -F t name_bd &gt; /path/to/name_backup.tar</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 0001-01-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://example.org/posts/database/relational/postgresql/postgrisql/" data-title=""><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://example.org/posts/database/relational/postgresql/postgrisql/" data-title=""><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://example.org/posts/database/relational/postgresql/postgrisql/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://example.org/posts/database/relational/postgresql/postgrisql/" data-title=""><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://example.org/posts/database/relational/postgresql/postgrisql/" data-title=""><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://example.org/posts/database/relational/postgresql/postgrisql/" data-title=""><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://example.org/posts/database/relational/postgresql/postgrisql/" data-title="" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fexample.org%2fposts%2fdatabase%2frelational%2fpostgresql%2fpostgrisql%2f&amp;text=" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/django/django/" class="prev" rel="prev" title=""><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i></a>
+            <a href="/posts/database/relational/mysql/config/" class="next" rel="next" title=""><i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="www.link.com" target="_blank">Fernando Velazquez</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

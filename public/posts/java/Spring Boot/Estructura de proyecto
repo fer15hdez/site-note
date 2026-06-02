@@ -1,0 +1,41 @@
+src/main/java/
+├── com/tuempresa/tuproyecto/
+│   ├── domain/
+│   │   ├── entities/
+│   │   │   ├── User.java
+│   │   │   └── Product.java
+│   │   └── repositories/
+│   │       ├── UserRepository.java
+│   │       └── ProductRepository.java
+│   ├── service/
+│   │   ├── UserService.java
+│   │   └── ProductService.java
+│   ├── data/
+│   │   ├── structures/
+│   │   │   ├── Interval.java
+│   │   │   └── IntervalTree.java
+│   │   └── repositories/
+│   │       └── IntervalRepository.java
+│   ├── controller/
+│   │   └── ProductController.java
+│   ├── exception/
+│   │   ├── EntityNotFoundException.java
+│   │   └── CustomException.java
+
+
+src/main/java/
+├── com/example/myapp/
+│   ├── dto/
+│   │   ├── UserDto.java
+│   │   └── ProductDto.java
+│   ├── exceptions/
+│   │   ├── EntityNotFoundException.java
+│   │   └── CustomException.java
+│   ├── error/
+│   │   ├── GlobalExceptionHandler.java
+│   │   └── ErrorResponse.java
+│   ├── service/
+│   │   ├── UserService.java
+│   │   └── ProductService.java
+│   └── controller/
+│       └── UserController.java

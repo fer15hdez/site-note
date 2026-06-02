@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+	<meta name="generator" content="Hugo 0.145.0">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>My New Hugo Site</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://example.org/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="My New Hugo Site">
+  <meta property="og:description" content="This is my cool site">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="https://example.org/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://example.org/logo.png">
+  <meta name="twitter:title" content="My New Hugo Site">
+  <meta name="twitter:description" content="This is my cool site">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.org/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="My New Hugo Site">
+    <link rel="feed" href="/index.xml" type="application/rss+xml" title="My New Hugo Site"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "https:\/\/example.org\/","inLanguage": "en-us","author": {
+                "@type": "Person",
+                "name": "Fernando Velazquez"
+            },"description": "This is my cool site","name": "My New Hugo Site"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My New Hugo Site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My New Hugo Site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"></div></div>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/java/spring-boot/lombok-mapstruct/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h1 id="lombok-y-mapstruct">Lombok y MapStruct</h1>
+<h2 id="pomxml">pom.xml</h2>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-xml">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">    <span class="nt">&lt;properties&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Otras propeties --&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&lt;org.mapstruct.version&gt;</span>1.6.3<span class="nt">&lt;/org.mapstruct.version&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Otras propeties --&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&lt;/properties&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;dependencies&gt;</span>
+</span></span><span class="line"><span class="cl">    ...
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- otras dependencias --&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&lt;groupId&gt;</span>org.mapstruct<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&lt;artifactId&gt;</span>mapstruct<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&lt;version&gt;</span>${org.mapstruct.version}<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&lt;/dependency&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Otras dependiencias --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/dependencies&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;build&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Otros plugins --&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;plugin&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;artifactId&gt;</span>maven-compiler-plugin<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;configuration&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;annotationProcessorPaths&gt;</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&lt;path&gt;</span>
+</span></span><span class="line"><span class="cl">							<span class="nt">&lt;groupId&gt;</span>org.mapstruct<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">							<span class="nt">&lt;artifactId&gt;</span>mapstruct-processor<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">							<span class="nt">&lt;version&gt;</span>1.6.3<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&lt;/path&gt;</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&lt;path&gt;</span>
+</span></span><span class="line"><span class="cl">							<span class="nt">&lt;groupId&gt;</span>org.projectlombok<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">							<span class="nt">&lt;artifactId&gt;</span>lombok<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">							<span class="nt">&lt;version&gt;</span>1.18.32<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&lt;/path&gt;</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&lt;path&gt;</span>
+</span></span><span class="line"><span class="cl">							<span class="nt">&lt;groupId&gt;</span>org.projectlombok<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">							<span class="nt">&lt;artifactId&gt;</span>lombok-mapstruct-binding<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">							<span class="nt">&lt;version&gt;</span>0.2.0<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&lt;/path&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;/annotationProcessorPaths&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;/configuration&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&lt;/plugin&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;plugin&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;configuration&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;excludes&gt;</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&lt;exclude&gt;</span>
+</span></span><span class="line"><span class="cl">							<span class="nt">&lt;groupId&gt;</span>org.projectlombok<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">							<span class="nt">&lt;artifactId&gt;</span>lombok<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&lt;/exclude&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;/excludes&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;/configuration&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&lt;/plugin&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- Otros plugins --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/build&gt;</span></span></span></code></pre></div></div>
+<h2 id="class-abstracta-o-interface">Class abstracta o Interface</h2>
+<p>Se crea una clase abstracta o una interface. Yo la cree en la carpeta service</p></div><div class="post-footer">
+        <a href="/posts/java/spring-boot/lombok-mapstruct/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/java/spring-boot/springboot/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h1 id="jpa">JPA:</h1>
+<ul>
+<li>Es una API de java.</li>
+<li>Java Persistence API, más conocida por sus siglas JPA, es una API de persistencia desarrollada para la plataforma Java EE.
+Maneja datos relacionales en aplicaciones usando la Plataforma Java en sus ediciones Standard y Enterprise.</li>
+<li>Proporciona un mecanismo para gestionar la persistencia y la correlación relacional de objetos y las funciones desde las especificaciones EJB 3.0 .</li>
+</ul>
+<h1 id="hibernate-orm">HIBERNATE (ORM)</h1>
+<ul>
+<li>Hibernate es una herramienta de mapeo objeto-relacional para la plataforma Java que facilita el mapeo de atributos entre una base de
+datos relacional tradicional y el modelo de objetos de una aplicación.</li>
+<li>Is a powerful object-relational mapping (ORM) framework for Java that simplifies the process of interacting with relational databases.
+It automatically maps Java objects to database tables, eliminating the need for manual SQL queries and providing a more object-oriented
+approach to data persistence.</li>
+<li>Hibernate entonces es un <strong>ORM que implementa JPA</strong>. Como usaremos las interfaces de JPA, no habrá ninguna referencia directa en nuestro código a Hibernate.</li>
+</ul>
+<h1 id="structure-of-project">Structure of project</h1>
+<p>Controler: Is the layer(capa) of presentation. In this layer is where are the endpoint. <br>
+Service: Is the layer of business logic.<br>
+Domain (Dominio): Is this the layer where we place the POJO classes, meaning this is where our domain resides.<br>
+Test: The place where the tests are.</p></div><div class="post-footer">
+        <a href="/posts/java/spring-boot/springboot/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/js/js/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h3 id="control-structure">Control Structure</h3>
+<h2 id="for--of-">for &hellip; of &hellip;</h2>
+<p>let frutas = [&rsquo;🍎&rsquo;, &lsquo;🍌&rsquo;, &lsquo;🍓&rsquo;]</p>
+<p>for (let fruta of frutas) {
+console.log(fruta) // imprime el elemento en la posición i
+}</p>
+<h2 id="arrayforeach">array.forEach()</h2>
+<p>Uno de esos métodos es array.forEach(), que nos permite ejecutar una function para cada uno de los elementos del array. Esta función recibe como parámetros el elemento que se está iterando en ese momento, el índice del elemento y el propio array.Uno de esos métodos es array.forEach(), que nos permite ejecutar una function para cada uno de los elementos del array. Esta función recibe como parámetros el elemento que se está iterando en ese momento, el índice del elemento y el propio array.</p></div><div class="post-footer">
+        <a href="/posts/js/js/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/k8s/k8s/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h1 id="kubernetes">Kubernetes</h1>
+<ul>
+<li>En YAML, si repites una clave al mismo nivel, la segunda suele sobrescribir a la primera.
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-yml">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="w"> </span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ingressClassName</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="nt">spec</span><span class="p">:</span><span class="w"> </span><span class="c"># &lt;--- ¡Aquí está el error! Debe haber un solo &#39;spec&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">rules</span><span class="p">:</span><span class="w">        </span></span></span></code></pre></div></div>
+</li>
+</ul>
+<h2 id="comandos">Comandos</h2>
+<ul>
+<li>kubectl apply -f &lt;nombre_del_archivo.yaml&gt; : aplicar manifiesto(archivo).</li>
+</ul>
+<h2 id="deployments">Deployments</h2>
+<ul>
+<li>
+<p>Los nombres de los objetos (como el name en metadata) deben seguir las reglas de DNS. No se permiten guiones bajos (_). Debes usar guiones medios (-).</p></div><div class="post-footer">
+        <a href="/posts/k8s/k8s/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/k8s/kind/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h1 id="kind-kubernetes-in-docker">KinD (kubernetes in docker)</h1>
+<ul>
+<li>kind ejecuta los componentes de Kubernetes dentro de contenedores Docker dentro del contenedor que simula el cluster.</li>
+<li>Las imagenes docker que se van a usar en kind se deben importar a kind para que el cluster pueda tener acceso.</li>
+</ul>
+<h2 id="instal-kind-kubernetes-in-docker">Instal kind (kubernetes in docker)</h2>
+<ul>
+<li><code>go install sigs.k8s.io/kind@v0.30.0</code>: si tiene instaldo go.</li>
+</ul>
+<h2 id="crear-cluster-con-kind">Crear cluster con kind</h2>
+<ul>
+<li><code>kind create cluster --name cluster.test</code>: crea un cluster con el nombre &ldquo;cluster.test&rdquo;.</li>
+<li><code>kind create cluster --config kind-config.yaml</code>: con un archivo.</li>
+<li><code>kind create cluster --name cluster.test --config kind-config.yaml</code>: crea un cluster con el nombre &ldquo;cluster.test&rdquo; con un archivo.</li>
+</ul>
+<h2 id="listar-clusters">Listar clusters</h2>
+<ul>
+<li><code>kind get clusters</code></li>
+</ul>
+<h2 id="loading-an-image-into-your-cluster">Loading an Image Into Your Cluster</h2>
+<ul>
+<li><code>kind load docker-image my-custom-image:unique-tag --name nameCluster</code></li>
+</ul>
+<h2 id="listar-imagenes-dentro-del-cluster">Listar imagenes dentro del cluster</h2>
+<ul>
+<li><code>crictl images</code> o <code>docker images</code></li>
+</ul>
+<h2 id="listar-contenedores-dentro-del-cluster">Listar contenedores dentro del cluster</h2>
+<ul>
+<li><code>crictl ps</code></li>
+</ul></div><div class="post-footer">
+        <a href="/posts/k8s/kind/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/linux/50-comandos-linux/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><pre><code>pwd: Este comando te muestra el directorio de trabajo actual en el que te encuentras. Es útil para saber dónde estás en la estructura de directorios del sistema. 
+ls: Listar archivos y directorios. Con este comando, puedes ver los archivos y directorios en el directorio actual. 
+cd: Cambiar de directorio. Utiliza este comando seguido de la ruta del directorio al que deseas acceder para moverte por el sistema de archivos. 
+history: Muestra el historial de comandos ejecutados anteriormente. Te permite ver los comandos que has utilizado en la sesión actual. 
+clear: Borra la pantalla del terminal, lo que te permite tener una interfaz de línea de comandos limpia y lista para usar. 
+mkdir: Crea un nuevo directorio en el sistema de archivos. 
+rmdir: Elimina un directorio vacío del sistema. 
+cp: Copia archivos y directorios de un lugar a otro. 
+mv: Mueve archivos y directorios de un lugar a otro, o cambia su nombre. 
+rm: Elimina archivos y directorios del sistema. 
+touch: Crea un nuevo archivo vacío en el sistema. 
+find: Busca archivos y directorios en el sistema. 
+grep: Busca un patrón específico dentro de un archivo. 
+head: Muestra las primeras líneas de un archivo. 
+tail: Muestra las últimas líneas de un archivo. 
+cat: Vincula archivos y muestra su contenido. 
+less: Muestra el contenido de un archivo una página a la vez, lo que facilita la lectura de archivos largos. 
+awk: Manipula y analiza archivos de texto utilizando patrones y acciones específicas. 
+sed: Editor de secuencias para filtrar y transformar texto en archivos. 
+vim: Un editor de texto potente y altamente configurable para crear y editar archivos de texto. 
+nano: Un editor de texto sencillo y fácil de usar para crear y editar archivos de texto. 
+emacs: Un editor de texto altamente personalizable para realizar tareas de edición de texto avanzadas. 
+echo: Muestra texto en la pantalla o lo redirige a un archivo. 
+tar: Archiva y comprime archivos y directorios en un solo archivo. 
+gzip: Comprime archivos utilizando el algoritmo de compresión gzip. 
+zip: Comprime archivos en un archivo ZIP y los descomprime si es necesario. 
+sudo: Ejecuta un comando con privilegios de superusuario. 
+su: Cambia a otra cuenta de usuario en la sesión de la terminal. 
+umask: Establece los permisos de creación de archivos predeterminados para nuevos archivos y directorios. 
+chmod: Cambia los permisos de un archivo o directorio. 
+chown: Cambia el propietario de un archivo o directorio. 
+ps: Muestra los procesos en ejecución en el sistema. 
+top: Muestra el estado actual del sistema, incluida la carga de la CPU y la memoria. 
+free: Muestra el uso de la memoria del sistema. 
+df: Muestra el uso del espacio en disco del sistema. 
+du: Muestra el uso del disco de un archivo o directorio específico. 
+which: Muestra la ubicación de un comando específico en el sistema. 
+man: Muestra el manual de un comando específico para obtener más información sobre su uso. 
+ip: Ver y administrar interfaces de red y tablas de enrutamiento. 
+ss: Muestra los sockets de red y su información relacionada. 
+dig: Consulta servidores DNS para obtener información relacionada con DNS. 
+ping: Prueba la conectividad de red con un host remoto. 
+ssh: Conectarse de forma segura a un sistema remoto utilizando el protocolo SSH. 
+scp: Copia archivos de forma segura entre sistemas remotos utilizando el protocolo SSH. 
+rsync: Sincroniza archivos y directorios entre sistemas remotos de forma eficiente. 
+curl: Transfiere datos desde o hacia un servidor utilizando varios protocolos. 
+wget: Descarga archivos de la web utilizando HTTP, HTTPS o FTP. 
+sort: Ordena las líneas de texto en un archivo. 
+uniq: Muestra líneas de texto únicas en un archivo. 
+diff: Compara dos archivos y muestra las diferencias entre ellos. 
+</code></pre></div><div class="post-footer">
+        <a href="/posts/linux/50-comandos-linux/">Read More</a></div>
+</article><ul class="pagination"><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/">1</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/2/">2</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/3/">3</a>
+                    </span>
+                </li><li class="page-item active">
+                    <span class="page-link">
+                        <a href="/page/4/">4</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/5/">5</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/6/">6</a>
+                    </span>
+                </li></ul></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="www.link.com" target="_blank">Fernando Velazquez</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script>window.config={"data":{"id-1":"This is my cool site"},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script src="/js/theme.min.js"></script></body>
+</html>

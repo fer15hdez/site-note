@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment # Tipo de documento, de manifiesto
+metadata:        # Es para el deployment   
+  name: hello
+spec:
+  replicas: 3
+  selector: 
+    matchLabels:        # <-- CORRECCIÓN: Usamos 'matchLabels'. Especifica que va a matchear por el label.
+      app: hello-world  # <-- CORRECCIÓN: Pares clave:valor que coinciden
+  template:
+    metadata: 
+      labels:           # <-- CORRECCIÓN: El campo es 'labels', en plural
+        app: hello-world # <-- COINCIDENCIA: Debe ser idéntico al selector
+    spec:               # <-- Siguiente paso: La especificación del contenedor
+      volumes:  # Volumen que crea para el pod. 
+        - name: config-volume
+          configMap:
+            name: hello-config  # Nombre del configMap
+        - name: secret-volume
+          secret:
+            secretName: hello-secrets  # Nombre del secret
+      # ¡Definición del contenedor!
+      containers:
+      - name: hello-k8s-nginx
+        image: docker.io/library/hello-web-app:latest
+        imagePullPolicy: Never # Le dice que no busque la imagen en una fuente externa.  
+      #   env:
+      #     - name: MENSAJE_BIENVENIDA  # Nombre de la variable dentro del Pod
+      #       valueFrom:
+      #         configMapKeyRef:
+      #           name: hello-config      # Nombre del ConfigMap
+      #           key: WELCOME_MSG      # Clave dentro del ConfigMap
+      #     - name: PASSWORD_DB
+      #       valueFrom:
+      #         secretKeyRef:
+      #           name: hello-secrets
+      #           key: DB_PASS
+      ### ConfigMap o Secret COMO VOLUMENES ###
+        volumeMounts:
+          - name: config-volume
+            mountPath: "/etc/config"  # Los archivos aparecerán aquí
+            readOnly: true
+          - name: secret-volume
+            mountPath: "/etc/keys"   # Los archivos aparecerán aquí
+            readOnly: true

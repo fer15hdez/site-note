@@ -1,0 +1,143 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categoria1 - Category - My New Hugo Site</title>
+        <link>https://example.org/categories/categoria1/</link>
+        <description>Categoria1 - Category - My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>fer@mail.com (Fernando Velazquez)</managingEditor>
+            <webMaster>fer@mail.com (Fernando Velazquez)</webMaster><lastBuildDate>Wed, 04 Mar 2020 15:58:26 &#43;0800</lastBuildDate><atom:link href="https://example.org/categories/categoria1/" rel="self" type="application/rss+xml" /><item>
+    <title>DOCKER</title>
+    <link>https://example.org/posts/docker/</link>
+    <pubDate>Wed, 04 Mar 2020 15:58:26 &#43;0800</pubDate>
+    <author>fer@mail.com (Fernando Velazquez)</author>
+    <guid>https://example.org/posts/docker/</guid>
+    <description><![CDATA[<h1 id="docker">Docker</h1>
+<ul>
+<li>To start the project is used the command &ldquo;docker-compose&rdquo; in the v2 is &ldquo;docker compose&rdquo;</li>
+</ul>
+<h2 id="manage-imges">Manage imges</h2>
+<p><code>docker image --help</code>: show all the command available.<br>
+<code>build:</code> to build a image from a <em><strong>dockerfile</strong></em>  : Ex. docker build -t nameImage:tag /path/dockerfile<br>
+<code>history</code>: show the history of a image, how was build.<br>
+<code>inspect</code>: detail and inside of a image. <code>sudo docker image inspect IMAGE ID</code><br>
+<code>docker image ls</code>: show all the download images.<br>
+<code>docker image ls -a</code>: muestra imágenes intermedias.<br>
+<code>-q</code>: para ver los números de identificación.<br>
+<code>prune</code>:  borrar todas las imágenes que no estés utilizando.<br>
+<code>docker image tag</code> <strong>server:tagname</strong> <code>newName/newName:latest</code> :  change the name of repository.<br>
+<code>docker image tag</code> <strong>idImage</strong> <code>newName/newName:latest</code> :   change the name of repository.<br>
+<code>docker image rm $(docker images --filter since=b721d1cdaac7 -q) -f</code>: Delete the image and the intermediate images</p>]]></description>
+</item>
+<item>
+    <title>Java</title>
+    <link>https://example.org/posts/java/</link>
+    <pubDate>Wed, 04 Mar 2020 15:58:26 &#43;0800</pubDate>
+    <author>fer@mail.com (Fernando Velazquez)</author>
+    <guid>https://example.org/posts/java/</guid>
+    <description><![CDATA[<h1 id="variables">VARIABLES</h1>
+<h2 id="variables-primitivas">VARIABLES PRIMITIVAS</h2>
+<ul>
+<li><code>byte</code> 	Stores whole numbers from <code>-128 to 127</code></li>
+<li><code>short</code> 	Stores whole numbers from <code>-32,768 to 32,767</code></li>
+<li><code>int</code> 	Stores whole numbers from <code>-2,147,483,648 to 2,147,483,647</code></li>
+<li><code>long</code> 	Stores whole numbers from <code>-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</code></li>
+<li><code>float</code> 	Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits</li>
+<li><code>double</code> 	Stores fractional numbers. Sufficient for storing 15 to 16 decimal digits</li>
+<li><code>boolean</code> 	Stores true or false values</li>
+<li><code>char</code> 	Stores a single character/letter or ASCII values</li>
+</ul>
+<h2 id="string">STRING</h2>
+<ul>
+<li><code>indexOf()</code>: method returns the <code>index</code> (the position) of the first occurrence of a specified text in a string (including whitespace).</li>
+<li>The <code>toUpperCase()</code> method converts a string to upper case letters.</li>
+<li>The <code>toLowerCase()</code> method converts a string to lower case letters.</li>
+<li><code>charAt()</code> method to access a character at a specific position in a string: <code>txt.charAt(0)</code></li>
+<li><code>trim()</code>: elimina los espacios del inicio y del fin de la cadena de texto.</li>
+</ul>
+<h3 id="concatenacion-string-y-numeros">CONCATENACION STRING Y NUMEROS</h3>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;10&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">20</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">String</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="nf">1020</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="n">String</span><span class="p">)</span></span></span></code></pre></div></div>
+<h1 id="casting">CASTING</h1>
+<ul>
+<li><code> int myInt = (int) myDouble; // Manual casting: double to int</code></li>
+</ul>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// Esto causaría un error de compilación:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// float miNumero = 100.0; </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Esto es correcto, ya que el literal es un float:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">float</span><span class="w"> </span><span class="n">miNumero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">100</span><span class="p">.</span><span class="na">0f</span><span class="p">;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">Es</span><span class="w"> </span><span class="n">practica</span><span class="w"> </span><span class="n">comun</span><span class="w"> </span><span class="n">identificar</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="n">una</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="n">al</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">el</span><span class="w"> </span><span class="kt">float</span><span class="w">  </span></span></span></code></pre></div></div>
+<h1 id="operator">OPERATOR</h1>
+<ul>
+<li>
+<p><code>&amp;&amp;</code>  	Logical and 	Returns true if both statements are true 	<code>x &lt; 5 &amp;&amp;  x &lt; 10</code></p>]]></description>
+</item>
+<item>
+    <title>MarkDown</title>
+    <link>https://example.org/posts/sintaxis/</link>
+    <pubDate>Wed, 04 Mar 2020 15:58:26 &#43;0800</pubDate>
+    <author>fer@mail.com (Fernando Velazquez)</author>
+    <guid>https://example.org/posts/sintaxis/</guid>
+    <description><![CDATA[<h1 id="encabezados-symbol-of-number-"><strong>Encabezados</strong> (Symbol of number #)</h1>
+<h1 id="this-is-level-1-article-title-">This is level 1 (article title) (#)</h1>
+<h2 id="this-is-level-2-">This is level 2 (##)</h2>
+<h3 id="this-is-level-3-">This is level 3 (###)</h3>
+<h4 id="this-is-level-4-">This is level 4 (####)</h4>
+<h5 id="this-is-level-5-">This is level 5 (#####)</h5>
+<h2 id="salto-de-linea">Salto de linea</h2>
+<p>Para realizar un salto de línea y empezar una frase en una línea siguiente dentro del mismo párrafo, tendrás que <strong>pulsar dos veces la barra espaciadora antes de pulsar una vez intro.</strong></p>
+<h2 id="texto-básico">Texto básico</h2>
+<ol>
+<li>This text is **bold**.</li>
+<li>This text is *italic*.</li>
+<li>This text is both ***bold and italic***.</li>
+</ol>
+<p>Para ignorar los caracteres de formato de Markdown, ponga &ldquo;&quot; antes del carácter.</p>]]></description>
+</item>
+<item>
+    <title>My First Post</title>
+    <link>https://example.org/posts/golang/</link>
+    <pubDate>Wed, 04 Mar 2020 15:58:26 &#43;0800</pubDate>
+    <author>fer@mail.com (Fernando Velazquez)</author>
+    <guid>https://example.org/posts/golang/</guid>
+    <description><![CDATA[<h1 id="golang">Golang</h1>
+<h2 id="comandos">Comandos</h2>
+<p><code>go list -f '{{.Target}}'</code>
+<code>go clean -modcache</code>: Limpia la cache de los modulos</p>
+<h2 id="crear-un-modulo">Crear un modulo</h2>
+<p><code>go mod init nombre_modulo</code></p>
+<ul>
+<li>
+<p>Un módulo es una colección de paquetes relacionados que se versionan juntos como una unidad lógica para gestionar dependencias.</p>
+</li>
+<li>
+<p>Esto crea un archivo &ldquo;go.mod&rdquo;</p>
+</li>
+<li>
+<p>Para usar un modulo se importa desde el archivo donde se necesita</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-go">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;fmt&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;example.com/greetings&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s">``</span><span class="err">`</span></span></span></code></pre></div></div>
+</li>
+<li>
+<p>Para especificar la direccion del modulo que se quiere utilizar cuando es local <br>
+<code>go mod edit -replace nombre_mod_actual=dir/nombre_mod_utilizar</code></p>]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+
+{#FORM#}
+{#Change the value of Method and Action in the Form#}
+{{ form_start(form, {'action': path('target_route'), 'method': 'GET'}) }}
+
+
+{#Paginator #}
+{% if maxPages is defined and maxPages > 1 %}
+                        {% set nearbyPagesLimit = 4 %}
+                        <ul class="pagination pagination-sm">
+                            {# `«` arrow Priviosly page #}
+                            <li {{ thisPage == 1 ? 'class="disabled"' }}>
+                                <a href="{{ path('cliente_reporte', {page: thisPage - 1,
+                                    fechaDeIngreso:fecha_ingreso_inicio, control:true,
+                                    fechaDePago:fechaDePago,
+                                    fechaDePagoFin:fechaDePagoFin,
+                                    genero:genero,
+                                }) }}">«</a>
+                            </li>
+                            {#First page#}
+                            {% if thisPage is defined and thisPage > nearbyPagesLimit %}
+                                <li >
+                                    <a href="{{ path('cliente_reporte',
+                                        {page: 1, fechaDeIngreso:fecha_ingreso_inicio,
+                                            fechaDeIngresoFin:fecha_ingreso_fin, control:true,
+                                            fechaDePago:fechaDePago,
+                                            fechaDePagoFin:fechaDePagoFin,
+                                            genero:genero,
+                                        }) }}"> Inicio
+                                    </a>
+                                </li>
+                            {% endif %}
+
+                            {# Render each page number #}
+                            {% for i in 1..maxPages %}
+                                {% if 0 == (thisPage - nearbyPagesLimit) - loop.index %}
+                                    <li class="disabled"><a href="#">...</a></li>
+                                {% elseif 0 == (thisPage + nearbyPagesLimit) - loop.index %} {# dot after #}
+                                    <li class="disabled"><a href="#">...</a></li>
+                                {% elseif 0 < (thisPage - nearbyPagesLimit) - loop.index %} {# hide all before #}
+                                {% elseif 0 > (thisPage + nearbyPagesLimit) - loop.index %} {# hide all after #}
+                                {% else %}
+                                    <li {{ thisPage == i ? 'class="active"' }}>
+                                        <a href="{{ path('cliente_reporte',
+                                            {page: i, fechaDeIngreso:fecha_ingreso_inicio,
+                                                fechaDeIngresoFin:fecha_ingreso_fin, control:true,
+                                                fechaDePago:fechaDePago,
+                                                fechaDePagoFin:fechaDePagoFin,
+                                                genero:genero,
+                                            }) }}">{{ i }}
+                                        </a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                            {#End of page#}
+                            {% if thisPage < maxPages - nearbyPagesLimit %}
+                                <li >
+                                    <a href="{{ path('cliente_reporte',
+                                        {page: maxPages, fechaDeIngreso:fecha_ingreso_inicio,
+                                            fechaDeIngresoFin:fecha_ingreso_fin, control:true,
+                                            fechaDePago:fechaDePago,
+                                            fechaDePagoFin:fechaDePagoFin,
+                                            genero:genero,
+                                        }) }}">Fin
+                                    </a>
+                                </li>
+                            {% endif %}
+
+                            {# `»` arrow next page #}
+                            <li {{ thisPage == maxPages ? 'class="disabled"' }}>
+                                <a href="{{ path('cliente_reporte', {page: thisPage + 1 <= maxPages ? thisPage+1 : thisPage,
+                                    fechaDeIngreso:fecha_ingreso_inicio,
+                                    fechaDeIngresoFin:fecha_ingreso_fin, control:true,
+                                    fechaDePago:fechaDePago,
+                                    fechaDePagoFin:fechaDePagoFin,
+                                    genero:genero,
+
+                                }) }}">»</a>
+                            </li>
+                        </ul>
+                    {% endif %}
+</body>
+</html>

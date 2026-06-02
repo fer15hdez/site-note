@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title> - My New Hugo Site</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://example.org/posts/linux/comandos/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="My New Hugo Site">
+  <meta property="og:description" content="Install sudo apt-get install [program] –no-install-recommends: solo instala los paquetes nombrados.
+*rm -rf /var/lib/apt/lists/* * : borra la lista de los paquetes que estan disponibles en repositorio.
+Upgrade only one sudo apt-get –only-upgrade install namePackage: Package .deb, .rpm, etc sudo dpkg -i example.deb
+Variable de entorno para proxy Configurar variables desde la linia de comando solo afecta a la sesion actual export http_proxy=http://username:password@proxyserver.net:port/ printenv -&gt; Muestra todas las variables de entornos de la sesion. printenv VARIBLE -&gt; Muestra el valor de la varible.
+unset VAR Resetea el valor de la varible a su valor original.
+set Muestra todas las varibles.
+export PATH=&#34;$PATH:/opt/misprogramas&#34; En el archivo (~/.bashrc) se pone el codigo anterior. Esto solo afecta a la sesion usuario del actual. La parte de la ruta ‘$PATH:’ permite adicionar a los valores de $PATH el nuevo valor que se especifica.
+Para configurar variables para todo el sistema, es recomendable añadirlas a /etc/profile, /etc/bash.bashrc o /etc/environment">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="og:image" content="https://example.org/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://example.org/logo.png">
+  <meta name="twitter:title" content="My New Hugo Site">
+  <meta name="twitter:description" content="Install sudo apt-get install [program] –no-install-recommends: solo instala los paquetes nombrados.
+*rm -rf /var/lib/apt/lists/* * : borra la lista de los paquetes que estan disponibles en repositorio.
+Upgrade only one sudo apt-get –only-upgrade install namePackage: Package .deb, .rpm, etc sudo dpkg -i example.deb
+Variable de entorno para proxy Configurar variables desde la linia de comando solo afecta a la sesion actual export http_proxy=http://username:password@proxyserver.net:port/ printenv -&gt; Muestra todas las variables de entornos de la sesion. printenv VARIBLE -&gt; Muestra el valor de la varible.
+unset VAR Resetea el valor de la varible a su valor original.
+set Muestra todas las varibles.
+export PATH=&#34;$PATH:/opt/misprogramas&#34; En el archivo (~/.bashrc) se pone el codigo anterior. Esto solo afecta a la sesion usuario del actual. La parte de la ruta ‘$PATH:’ permite adicionar a los valores de $PATH el nuevo valor que se especifica.
+Para configurar variables para todo el sistema, es recomendable añadirlas a /etc/profile, /etc/bash.bashrc o /etc/environment">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.org/posts/linux/comandos/" /><link rel="prev" href="https://example.org/posts/linux/convertir-pst-a-mbox/" /><link rel="next" href="https://example.org/posts/linux/50-comandos-linux/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.org\/posts\/linux\/comandos\/"
+        },"genre": "posts","wordcount":  886 ,
+        "url": "https:\/\/example.org\/posts\/linux\/comandos\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Fernando Velazquez"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My New Hugo Site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My New Hugo Site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX"></h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;886 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#variable-de-entorno-para-proxy">Variable de entorno para proxy</a></li>
+    <li><a href="#permission">Permission</a></li>
+    <li><a href="#list-permissions">List permissions</a>
+      <ul>
+        <li><a href="#esta-cadena-de-10-caracteres-se-divide-así">Esta cadena de 10 caracteres se divide así:</a></li>
+      </ul>
+    </li>
+    <li><a href="#descomprimir">Descomprimir</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#list-the-group">List the group</a></li>
+        <li><a href="#show-which-group-the-user-belongs-to">Show which group the user belongs to</a></li>
+        <li><a href="#crear-y-eliminar-grupos">Crear y eliminar grupos</a></li>
+      </ul>
+    </li>
+    <li><a href="#user">USER</a>
+      <ul>
+        <li></li>
+        <li><a href="#crear-y-eliminar-usuarios">Crear y eliminar usuarios</a></li>
+      </ul>
+    </li>
+    <li><a href="#usuarios-y-grupos">Usuarios y grupos</a>
+      <ul>
+        <li><a href="#add-a-user-to-a-group">Add a user to a group</a></li>
+        <li><a href="#take-out-a-user-from-a-group">take out a user from a group</a></li>
+      </ul>
+    </li>
+    <li><a href="#free-swap-memory">Free swap memory</a></li>
+    <li><a href="#smb">SMB</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#ssh">SSH</a></li>
+    <li><a href="#file">File</a></li>
+    <li><a href="#certificados">Certificados</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="install">Install</h1>
+<p><em>sudo apt-get install [program]</em>
+<em>&ndash;no-install-recommends</em>: solo instala los paquetes nombrados.<br>
+*rm -rf /var/lib/apt/lists/* * :  borra la lista de los paquetes que estan disponibles en repositorio.<br>
+<strong>Upgrade only one</strong>
+<em>sudo apt-get &ndash;only-upgrade install namePackage</em>:
+<strong>Package .deb, .rpm, etc</strong>
+<em>sudo dpkg -i example.deb</em></p>
+<h2 id="variable-de-entorno-para-proxy">Variable de entorno para proxy</h2>
+<p><strong>Configurar variables desde la linia de comando solo afecta a la sesion actual</strong>
+<!-- raw HTML omitted -->export http_proxy=http://username:password@proxyserver.net:port/ <!-- raw HTML omitted --><br>
+<!-- raw HTML omitted -->printenv<!-- raw HTML omitted --> -&gt; Muestra todas las variables de entornos de la sesion.  <br>
+<!-- raw HTML omitted -->printenv VARIBLE<!-- raw HTML omitted --> -&gt; Muestra el valor de la varible.<br>
+<!-- raw HTML omitted -->unset VAR <!-- raw HTML omitted --> Resetea el valor de la varible a su valor original.<br>
+<!-- raw HTML omitted -->set<!-- raw HTML omitted --> Muestra todas las varibles.<br>
+<!-- raw HTML omitted -->export PATH=&quot;$PATH:/opt/misprogramas&quot;<!-- raw HTML omitted --> En el archivo (~/.bashrc) se pone el codigo anterior. Esto solo afecta a la sesion usuario del actual.
+La parte de la ruta &lsquo;$PATH:&rsquo; permite adicionar a los valores de $PATH el nuevo valor que se especifica.<br>
+Para configurar variables para todo el sistema, es recomendable añadirlas a /etc/profile, /etc/bash.bashrc o /etc/environment</p>
+<h2 id="permission">Permission</h2>
+<p>The owner of a file can change the permissions for user ( u ), group ( g ), or others ( o ) by adding ( + ) or subtracting ( - ) the read, write, and execute permissions.
+read ( r ), write(w), execute(x)<br>
+-R (recursive option)<br>
+<code>sudo chmod o=+rwx /var/www/html/</code></p>
+<h2 id="list-permissions">List permissions</h2>
+<p><code>ls -l /path/dir/</code>
+The order is d(if is a dir) u(rwx)g(rwx)o(rwx)</p>
+<ul>
+<li>
+<p><code>Lectura (r) 4</code>:	Permite ver el contenido del archivo o listar un directorio.</p>
+</li>
+<li>
+<p><code>Escritura (w) 2</code>:	Permite modificar el archivo o crear/borrar archivos en un directorio.</p>
+</li>
+<li>
+<p><code>Ejecución (x) 1</code>:	Permite ejecutar un archivo como programa o entrar en un directorio.</p>
+<ul>
+<li>7 (4+2+1) = rwx (Acceso total)</li>
+<li>6 (4+2+0) = rw- (Lectura y escritura)</li>
+<li>5 (4+0+1) = r-x (Lectura y ejecución)</li>
+<li>4 (4+0+0) = r&ndash; (Solo lectura)</li>
+</ul>
+</li>
+</ul>
+<h3 id="esta-cadena-de-10-caracteres-se-divide-así">Esta cadena de 10 caracteres se divide así:</h3>
+<p>Ej. cadena de permisos <code>-rwxr-xr--</code></p>
+<ul>
+<li>El primer carácter: Indica el tipo ( - para archivo, d para directorio).</li>
+<li>Los siguientes tres (rwx): Permisos del Propietario.</li>
+<li>Los tres centrales (r-x): Permisos del Grupo.</li>
+<li>Los tres finales (r&ndash;): Permisos de Otros.</li>
+</ul>
+<hr>
+<h2 id="descomprimir">Descomprimir</h2>
+<p><strong>Extraer el archivo .tar.gz al directorio de trabajo actual:</strong> <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->tar -xf filename.tar.gz<!-- raw HTML omitted --><!-- raw HTML omitted -->
+Este comando extraerá (-x) el archivo (-f) especificado (en este caso, filename.tar.gz) al directorio actual. <!-- raw HTML omitted -->
+<strong>Extraer el archivo .tar.gz a un directorio de trabajo diferente:</strong><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->tar -xf filename.tar.gz -C /home/user/files<!-- raw HTML omitted --> <!-- raw HTML omitted -->
+<strong>Comprimir con GZIP</strong> <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->gzip filename.tar<!-- raw HTML omitted --> <!-- raw HTML omitted -->
+<strong>Descomprimir el archivo .tar.gz con gzip:</strong> <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->gzip -d filename.tar<!-- raw HTML omitted --> <!-- raw HTML omitted -->
+<strong>Comprimir el archivo .tar y conservar la copia original:</strong> <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->gzip -c filename.tar<!-- raw HTML omitted -->
+<strong>Comprime el archivo .tar y guárdalo como un archivo diferente:</strong> <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->gzip -c filename.tar &gt; newfilename.tar.gz<!-- raw HTML omitted --> <!-- raw HTML omitted -->
+<strong>Comprimir varios archivos:</strong> <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->gzip file1 file2<!-- raw HTML omitted --> <!-- raw HTML omitted -->
+<strong>Descomprimir múltiples archivos:</strong> <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->gzip -d file1 file2<!-- raw HTML omitted --> <!-- raw HTML omitted -->
+<strong>Comprime todos los archivos de un directorio:</strong> <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->gzip -r directory1<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<hr>
+<h1 id="gestión-de-usuarios-y-grupos-en-linux">Gestión de usuarios y grupos en Linux</h1>
+<p><em>nano /etc/group</em> : Show all the group
+In this document line by line show the gruop and user.<br>
+<em>sambashare:x:129:lorenzo,pepe,juan</em> :<br>
+<em>sambashare</em> : el nombre del grupo.<br>
+<em>x</em> : una contraseña cifrada.<br>
+<em>129</em> : el número de identificación del grupo <strong>GID</strong><br>
+<em>lorenzo,pepe,juan,</em> : es un listado de los usuarios que pertenecen al grupo separados por comas.</p>
+<h3 id="list-the-group">List the group</h3>
+<p><em>cut -d : -f 1 /etc/group</em></p>
+<h3 id="show-which-group-the-user-belongs-to">Show which group the user belongs to</h3>
+<p><em>cat /etc/group | grep nameUser | cut -d: -f1</em></p>
+<h3 id="crear-y-eliminar-grupos">Crear y eliminar grupos</h3>
+<p><em>sudo groupadd [grupo]</em> : create a new group.<br>
+<em>sudo groupadd [grupo1], [grupo2], [grupo3]</em> : create many groups.<br>
+<em>sudo groupdel [group]</em> : delete a group.</p>
+<h2 id="user">USER</h2>
+<p><em>nano /etc/passwd</em> : show all the users.<br>
+In this document show all user, the structure is:<br>
+<em>userName:x:1000:1000:userName,,,:/home/userName:/bin/bash</em><br>
+<em>userName</em> : es el alias del usuario que utiliza para registrarse.<br>
+<em>x</em> : representa que la contraseña cifrada se encuentra en <strong>/etc/shadow</strong><br>
+<em>1000</em> : es el número de identificación del usuario <strong>UID</strong>.<br>
+<em>1000</em> : representa el número de identificación del grupo principal al que pertenece el usuario, lo que se conoce como GID.<br>
+<em>userName,,,</em> : es la información adicional que has proporcionado al crear la cuenta en cuestión.<br>
+<em>/home/lorenzo</em> : es la ruta de inicio del nuevo usuario, <em>el hogar del usuario.</em><br>
+<em>/bin/bash</em> : es el shell que utiliza el usuario en cuestión.</p>
+<h4 id="show-all-the-user">Show all the user</h4>
+<p><em>cat /etc/passwd | cut -d: -f1</em></p>
+<h3 id="crear-y-eliminar-usuarios">Crear y eliminar usuarios</h3>
+<p>sudo adduser [usuario]: create a user.<br>
+sudo deluser [usuario]: delte a user.</p>
+<h2 id="usuarios-y-grupos">Usuarios y grupos</h2>
+<p><em>groups [usuario]</em>: show which group the user belongs to.</p>
+<h3 id="add-a-user-to-a-group">Add a user to a group</h3>
+<p><em>sudo usermod -a -G [grupos] [usuario]</em></p>
+<h3 id="take-out-a-user-from-a-group">take out a user from a group</h3>
+<p>sudo deluser [usuario] [grupo]</p>
+<hr>
+<h2 id="free-swap-memory">Free swap memory</h2>
+<p><em>sudo swapoff -a</em> : turn off and clean swap memory
+<em>sudo swapon -a</em> : turn on swap memory</p>
+<h2 id="smb">SMB</h2>
+<h4 id="smbclient">smbclient</h4>
+<p>Option -A: is to autenticate from a file, where are the param to log in.<br>
+<em>smbclient  -A /file/where are param/smbclient_param  //10.7.1.67/Buzon\ Correos\ Seguridad(shared file)</em><br>
+<strong>Format of parameter</strong><br>
+username = fvelazquez<br>
+password = MyPassword<br>
+domain   = epepc.cupet.cu</p>
+<p><em>smbclient -L server.ip   -U MyUsername -W domain</em></p>
+<h2 id="ssh">SSH</h2>
+<p><em>ssh <a href="mailto:user@ip.address" rel="">user@ip.address</a> –p7654</em></p>
+<h2 id="file">File</h2>
+<p><strong>df -h</strong> -&gt; &ldquo;Disk Filesystem&rdquo;<br>
+<strong>du</strong> -&gt; abreviación de &ldquo;Disk Usage&rdquo;<br>
+<strong>du</strong> <em>[options]</em> <em>[location of directory or file]</em><br>
+<strong>du -h /home/user/Desktop/ | sort –rn</strong> -&gt; ordenará todos los archivos y carpetas de mayor a menor.<br>
+<em><em>du -h /home/user/Desktop | grep &lsquo;^\s</em>[0-9.]+G&rsquo;</em>* -&gt; todos los archivos mayores a 1 GB.M para mega.<br>
+<strong>du -h /home/user/Desktop/ &ndash;exclude=&quot;*.txt&quot;</strong> -&gt; Excluir tipos de archivos.</p>
+<h2 id="certificados">Certificados</h2>
+<ul>
+<li><code>curl --insecure -vvI &lt;url&gt; 2&gt;&amp;1 | awk 'BEGIN { cert=0 } /^\* SSL connection/ { cert=1 } /^\*/ { if (cert) print }'</code> : Muestra la info</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 0001-01-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://example.org/posts/linux/comandos/" data-title=""><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://example.org/posts/linux/comandos/" data-title=""><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://example.org/posts/linux/comandos/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://example.org/posts/linux/comandos/" data-title=""><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://example.org/posts/linux/comandos/" data-title=""><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://example.org/posts/linux/comandos/" data-title=""><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://example.org/posts/linux/comandos/" data-title="" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fexample.org%2fposts%2flinux%2fcomandos%2f&amp;text=" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/linux/convertir-pst-a-mbox/" class="prev" rel="prev" title=""><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i></a>
+            <a href="/posts/linux/50-comandos-linux/" class="next" rel="next" title=""><i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="www.link.com" target="_blank">Fernando Velazquez</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

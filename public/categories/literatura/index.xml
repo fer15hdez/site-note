@@ -1,0 +1,46 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Literatura - Category - My New Hugo Site</title>
+        <link>https://example.org/categories/literatura/</link>
+        <description>Literatura - Category - My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>fer@mail.com (Fernando Velazquez)</managingEditor>
+            <webMaster>fer@mail.com (Fernando Velazquez)</webMaster><lastBuildDate>Thu, 29 Jan 2026 15:58:26 &#43;0300</lastBuildDate><atom:link href="https://example.org/categories/literatura/" rel="self" type="application/rss+xml" /><item>
+    <title>Mi Gran Novela</title>
+    <link>https://example.org/posts/aws/s3/s3/</link>
+    <pubDate>Thu, 29 Jan 2026 15:58:26 &#43;0300</pubDate>
+    <author>fer@mail.com (Fernando Velazquez)</author>
+    <guid>https://example.org/posts/aws/s3/s3/</guid>
+    <description><![CDATA[<h2 id="connect-to-s3">Connect to s3</h2>
+<ul>
+<li>Create a user and a key password</li>
+<li><em><strong>AWS Configure</strong></em> Enter the key password.</li>
+<li>Create a S3 bucket (is like boxes where is storing the tree directory and file). Once created we can create directory.</li>
+<li>Create a acces point</li>
+</ul>
+<h4 id="command-to-connect">Command to connect</h4>
+<p><em><strong>aws s3  <!-- raw HTML omitted --> &lt;source/path&gt; &lt;destiny/path (uri access point)&gt;</strong></em>
+<em><strong>aws s3 cp ./test.txt s3://arn:aws:s3:us-east-1:223965763113:accesspoint/s3-acces-point-web</strong></em></p>
+<p><em><strong>To read a object by http browser is necessary to create bucket policy</strong></em></p>]]></description>
+</item>
+<item>
+    <title>Mi Gran Novela</title>
+    <link>https://example.org/posts/git/git/</link>
+    <pubDate>Thu, 29 Jan 2026 15:58:26 &#43;0300</pubDate>
+    <author>fer@mail.com (Fernando Velazquez)</author>
+    <guid>https://example.org/posts/git/git/</guid>
+    <description><![CDATA[<h1 id="git">Git</h1>
+<p>…or create a new repository on the command line</p>
+<p>echo &ldquo;# Note&rdquo; &raquo; README.md<br>
+git init<br>
+git add README.md<br>
+git commit -m &ldquo;first commit&rdquo;<br>
+git branch -M main<br>
+git remote add origin <a href="https://github.com/dquijote/Note.git" target="_blank" rel="noopener noreffer ">https://github.com/dquijote/Note.git</a> <strong>&ldquo;origin&rdquo; is the name of the url.</strong><br>
+git push -u origin main</p>
+<p>…or push an existing repository from the command line</p>
+<p>git remote add origin <a href="https://github.com/dquijote/Note.git" target="_blank" rel="noopener noreffer ">https://github.com/dquijote/Note.git</a><br>
+git branch -M main<br>
+git push -u origin main</p>]]></description>
+</item>
+</channel>
+</rss>

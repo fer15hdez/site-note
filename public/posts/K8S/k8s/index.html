@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title> - My New Hugo Site</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://example.org/posts/k8s/k8s/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="My New Hugo Site">
+  <meta property="og:description" content="Kubernetes En YAML, si repites una clave al mismo nivel, la segunda suele sobrescribir a la primera. spec: ingressClassName: nginx spec: # &lt;--- ¡Aquí está el error! Debe haber un solo &#39;spec&#39; rules: Comandos kubectl apply -f &lt;nombre_del_archivo.yaml&gt; : aplicar manifiesto(archivo). Deployments Los nombres de los objetos (como el name en metadata) deben seguir las reglas de DNS. No se permiten guiones bajos (_). Debes usar guiones medios (-).">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="og:image" content="https://example.org/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://example.org/logo.png">
+  <meta name="twitter:title" content="My New Hugo Site">
+  <meta name="twitter:description" content="Kubernetes En YAML, si repites una clave al mismo nivel, la segunda suele sobrescribir a la primera. spec: ingressClassName: nginx spec: # &lt;--- ¡Aquí está el error! Debe haber un solo &#39;spec&#39; rules: Comandos kubectl apply -f &lt;nombre_del_archivo.yaml&gt; : aplicar manifiesto(archivo). Deployments Los nombres de los objetos (como el name en metadata) deben seguir las reglas de DNS. No se permiten guiones bajos (_). Debes usar guiones medios (-).">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.org/posts/k8s/k8s/" /><link rel="prev" href="https://example.org/posts/k8s/kind/" /><link rel="next" href="https://example.org/posts/js/js/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.org\/posts\/k8s\/k8s\/"
+        },"genre": "posts","wordcount":  1593 ,
+        "url": "https:\/\/example.org\/posts\/k8s\/k8s\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Fernando Velazquez"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My New Hugo Site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My New Hugo Site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX"></h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1593 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;8 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#comandos">Comandos</a></li>
+    <li><a href="#deployments">Deployments</a></li>
+    <li><a href="#statefulset">StatefulSet</a></li>
+    <li><a href="#pv-persistent-volume">PV (Persistent Volume)</a></li>
+    <li><a href="#pvc-persistent-volume-claim">PVC (Persistent Volume Claim)</a></li>
+    <li><a href="#service">Service</a>
+      <ul>
+        <li><a href="#tipos-de-service">Tipos de service</a></li>
+        <li><a href="#endpoints">Endpoints</a></li>
+      </ul>
+    </li>
+    <li><a href="#ingress">INGRESS</a></li>
+    <li><a href="#pods">Pods</a>
+      <ul>
+        <li><a href="#comandos-1">Comandos</a></li>
+        <li><a href="#interactuar-dentro-de-un-pods">Interactuar dentro de un Pods</a></li>
+      </ul>
+    </li>
+    <li><a href="#namespace">Namespace</a>
+      <ul>
+        <li><a href="#comandos-2">Comandos</a></li>
+        <li><a href="#comados-deployments">Comados deployments</a></li>
+      </ul>
+    </li>
+    <li><a href="#jobs">Jobs</a>
+      <ul>
+        <li><a href="#comandos-3">Comandos</a></li>
+      </ul>
+    </li>
+    <li><a href="#cronjobs">CronJobs</a>
+      <ul>
+        <li><a href="#comandos-4">Comandos</a></li>
+      </ul>
+    </li>
+    <li><a href="#configmap-y-secret">ConfigMap y Secret</a>
+      <ul>
+        <li><a href="#comandos-5">Comandos</a></li>
+      </ul>
+    </li>
+    <li><a href="#secret">Secret</a>
+      <ul>
+        <li><a href="#comandos-6">Comandos</a></li>
+      </ul>
+    </li>
+    <li><a href="#probes-sondas">Probes (Sondas)</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="kubernetes">Kubernetes</h1>
+<ul>
+<li>En YAML, si repites una clave al mismo nivel, la segunda suele sobrescribir a la primera.
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-yml">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="w"> </span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ingressClassName</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="nt">spec</span><span class="p">:</span><span class="w"> </span><span class="c"># &lt;--- ¡Aquí está el error! Debe haber un solo &#39;spec&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">rules</span><span class="p">:</span><span class="w">        </span></span></span></code></pre></div></div>
+</li>
+</ul>
+<h2 id="comandos">Comandos</h2>
+<ul>
+<li>kubectl apply -f &lt;nombre_del_archivo.yaml&gt; : aplicar manifiesto(archivo).</li>
+</ul>
+<h2 id="deployments">Deployments</h2>
+<ul>
+<li>
+<p>Los nombres de los objetos (como el name en metadata) deben seguir las reglas de DNS. No se permiten guiones bajos (_). Debes usar guiones medios (-).</p>
+</li>
+<li>
+<p>Las más comunes son:</p>
+<ul>
+<li>app: Nombre de la aplicación.</li>
+<li>version: Para distinguir entre v1, v2, etc.</li>
+<li>env: Entorno (dev, staging, prod).</li>
+<li>tier: Capa (frontend, backend, db).</li>
+</ul>
+<p>managed-by: Quién lo creó (helm, terraform).</p>
+</li>
+<li>
+<p>Etiquetas (Labels): Son pares clave-valor (metadatos) que se adjuntan a cualquier objeto de K8s (Pods, Nodos, etc.). Las etiquetas se usan para organizar y seleccionar grupos de objetos. Por ejemplo: app: frontend o env: dev.</p>
+</li>
+<li>
+<p>Selectores (Selectors): Es una expresión que se usa para encontrar un subconjunto de objetos que coinciden con una etiqueta específica. Por ejemplo, un servicio (Service) usa un selector para saber a qué Pods debe dirigir el tráfico.</p>
+</li>
+<li>
+<p>El contenido de spec.selector.matchLabels debe ser un subconjunto exacto de lo que pongas en spec.template.metadata.labels. Si no coinciden letra por letra, el Deployment no podrá &ldquo;adueñarse&rdquo; de los Pods que él mismo crea.</p>
+</li>
+</ul>
+<h2 id="statefulset">StatefulSet</h2>
+<ul>
+<li>Es un Workload API object (un objeto de carga de trabajo), hermano del Deployment. Mientras que el Deployment es para aplicaciones &ldquo;sin estado&rdquo; (como un frontend que puedes borrar y recrear sin problemas), el <code>StatefulSet</code> es para aplicaciones &ldquo;con estado&rdquo; (como Postgres) que necesitan que su disco siempre sea el mismo aunque el Pod se mueva de nodo.</li>
+<li>Es el estándar para bases de datos. Garantiza que cada Pod tenga su propio nombre y su propio disco persistente de forma ordenada.</li>
+<li>Garantiza que el almacenamiento y la identidad de la red sean estables.</li>
+<li>Para que un StatefulSet funcione correctamente, Kubernetes recomienda crear primero un Service de tipo &ldquo;Headless&rdquo; (sin IP propia) para dar identidad a los Pods.</li>
+</ul>
+<h2 id="pv-persistent-volume">PV (Persistent Volume)</h2>
+<ul>
+<li>Es el recurso físico (un pedazo de disco en el nodo, un disco en la nube, etc.).</li>
+</ul>
+<h2 id="pvc-persistent-volume-claim">PVC (Persistent Volume Claim)</h2>
+<ul>
+<li>Es un tipo de manifiesto.</li>
+<li>Es la &ldquo;Solicitud de Alquiler&rdquo;. El desarrollador dice: &ldquo;Necesito 1GB de espacio con lectura/escritura&rdquo;. Kubernetes busca un PV que encaje y los &ldquo;une&rdquo; (Bound).</li>
+</ul>
+<h2 id="service">Service</h2>
+<ul>
+<li>El Service es un objeto fundamental que actúa como un enlace permanente y un balanceador de carga para un grupo de Pods.</li>
+<li>El Service toma la lista de direcciones IP de todos los Pods que lo respaldan y presenta una única IP virtual (ClusterIP) y un nombre DNS estable a otros Pods o servicios dentro del clúster.</li>
+</ul>
+<h3 id="tipos-de-service">Tipos de service</h3>
+<ul>
+<li><code>ClusterIP</code>:
+<ul>
+<li>Uso Principal:	Comunicación interna entre aplicaciones dentro del mismo clúster de K8s.</li>
+<li>Funcionamiento: Proporciona una IP virtual dentro del clúster (la ClusterIP).</li>
+<li>Accesibilidad:	Solo se puede acceder a este Service desde dentro del clúster.</li>
+<li>Ejemplo: Un frontend necesita comunicarse con un backend o una base de datos.</li>
+</ul>
+</li>
+<li><code>NodePort</code>: Abre un puerto estático en todos los nodos (Workers). El tráfico se dirige al puerto del nodo: <code>IP_del_Nodo</code>:<code>Puerto_del_Nodo</code>. Cada nodo redirige internamente al Service.
+<ul>
+<li>Uso Principal: Exponer un Service al exterior mediante un puerto específico en cada nodo del clúster.</li>
+<li>Funcionamiento: Además de una ClusterIP, abre un puerto estático (el NodePort) en el rango por defecto (30000-32767) en todos los nodos del clúster.</li>
+<li>Accesibilidad: Se puede acceder al Service desde fuera del clúster a través de: http://&lt;IP_del_Nodo&gt;:<!-- raw HTML omitted -->.</li>
+<li></li>
+</ul>
+</li>
+<li><code>LoadBalancer</code>: Provisiona un balanceador de carga externo. El Service solicita una IP pública y estable al proveedor de la nube (AWS, GCP, Azure), que distribuye el tráfico entre los nodos.</li>
+</ul>
+<h3 id="endpoints">Endpoints</h3>
+<ul>
+<li>Este es el concepto &ldquo;detrás de cámaras&rdquo; de un Service.</li>
+<li>Cuando creas un Service, este busca Pods con las etiquetas (labels) correctas. Pero el Service no manda el tráfico &ldquo;al aire&rdquo;; mantiene una lista interna de las direcciones IP de los Pods que están listos. Esa lista se llama Endpoints.
+<ul>
+<li>Si el <code>Readiness Probe</code> tiene éxito: La IP del Pod aparece en la lista de Endpoints.</li>
+<li>Si el <code>Readiness Probe</code> falla: La IP del Pod se elimina de la lista de Endpoints automáticamente.</li>
+</ul>
+<h4 id="comando">Comando</h4>
+<ul>
+<li><code>kubectl get endpoints {nombre-service}</code>: te permite ver qué IPs están &ldquo;activas&rdquo; para recibir tráfico en un servicio específico.</li>
+</ul>
+</li>
+</ul>
+<h2 id="ingress">INGRESS</h2>
+<ul>
+<li>Es un objeto de API que actúa como una &ldquo;puerta de entrada&rdquo; inteligente al clúster. Mientras que un Service se encarga de conectar tráfico a nivel de red (Capa 4 - TCP/UDP), el Ingress gestiona el acceso externo a los servicios a nivel de aplicación (Capa 7 - HTTP/HTTPS).</li>
+<li>Componentes importantes:
+<ul>
+<li>Ingress Resource (El Recurso): Es un archivo YAML donde defines las reglas de enrutamiento (ej: &ldquo;si el tráfico viene a myapp.com/api, envíalo al Service A&rdquo;).</li>
+<li>Ingress Controller (El Controlador): Es el software que realmente ejecuta esas reglas. A diferencia de otros controladores en K8s, este no viene instalado por defecto. Debes elegir e instalar uno (como Nginx, Traefik, HAProxy o Kong).</li>
+</ul>
+</li>
+<li>Funcionalidades clave:
+<ul>
+<li>Enrutamiento Basado en el Host (Host-based Routing). Puedes dirigir el tráfico según el nombre de dominio.
+<ul>
+<li>ventas.empresa.com -&gt; Service de Ventas.</li>
+<li>rrhh.empresa.com -&gt; Service de Recursos Humanos.</li>
+</ul>
+</li>
+<li>Enrutamiento Basado en la Ruta (Path-based Routing). Puedes dirigir el tráfico según la subcarpeta o ruta de la URL.
+<ul>
+<li>empresa.com/pago -&gt; Service de Pagos.</li>
+<li>empresa.com/carrito -&gt; Service de Carrito.</li>
+</ul>
+</li>
+<li>Terminación TLS/SSL
+<ul>
+<li>El Ingress puede gestionar tus certificados de seguridad. En lugar de configurar el certificado SSL en cada Pod o Service, lo configuras una sola vez en el Ingress. El tráfico llega cifrado al Ingress y luego viaja de forma &ldquo;plana&rdquo; (HTTP) dentro del clúster hacia los servicios.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="pods">Pods</h2>
+<ul>
+<li>IPs Volátiles: La dirección IP de un Pod es efímera. Cuando un Pod muere y es reemplazado por uno nuevo, incluso si tienen el mismo nombre y etiquetas, el nuevo Pod tendrá una IP diferente.</li>
+</ul>
+<h3 id="comandos-1">Comandos</h3>
+<ul>
+<li><code>kubectl get nodes -o wide</code>: Encontrar la IP del nodo.</li>
+<li><code>kubectl get pods -o wide</code>:  Encontrar la IP del pod.</li>
+<li><code>kubectl get service &lt;nombre-del-servicio&gt; -o yaml</code>: Obtener los puertos si el servicio es de tipo NodePort.</li>
+<li><code>kubectl describe pod &lt;nombre-del-pod&gt;</code>:  Ver detalles de la IP.</li>
+<li><code>kubectl logs &lt;nombre-del-pod&gt;</code>: Ver los logs del contenedor y verificar si hay información sobre los puerto.</li>
+<li><code>kubectl logs -n ingress-nginx -l app.kubernetes.io/name=ingress-nginx --tail 10</code>: is used to retrieve the last 10 lines of logs from the NGINX Ingress Controller pods.</li>
+<li><code>kubectl delete pod &lt;pod-name&gt;</code>: Eliminar un pod.</li>
+<li><code>kubectl delete pods -l &lt;etiqueta&gt;=&lt;valor&gt;</code>: Eliminar los pods que tienen la <!-- raw HTML omitted -->=<!-- raw HTML omitted -->.</li>
+<li><code>kubectl delete pods -n &lt;espacio-de-nombres&gt;</code>: Eliminar los pods por namespace.</li>
+</ul>
+<h3 id="interactuar-dentro-de-un-pods">Interactuar dentro de un Pods</h3>
+<ul>
+<li><code>kubectl exec -it &lt;nombre-del-pod&gt; -- /bin/sh</code></li>
+<li><code>kubectl exec -it &lt;nombre-del-pod&gt; -- bash</code></li>
+</ul>
+<h2 id="namespace">Namespace</h2>
+<h3 id="comandos-2">Comandos</h3>
+<ul>
+<li><code>kubectl.exe get namespace</code>: Lista los namespace.</li>
+</ul>
+<h3 id="comados-deployments">Comados deployments</h3>
+<ul>
+<li><code>kubectl get deployments</code>: Lista los deployments.</li>
+<li><code>kubectl get deploy</code>: Lista más concisa.</li>
+<li><code>kubectl rollout status deployment/&lt;nombre-del-deployment&gt;</code>: Para ver el estado de un deployment específico.</li>
+<li><code>kubectl describe deployment/&lt;nombre-del-deployment&gt;</code>: Muestra los valores del deployment.</li>
+<li><code>kubectl rollout restart deployment &lt;nombre-del-deployment&gt;</code>: inicia un reinicio progresivo de los pods, creando nuevos pods y terminando los antiguos de manera controlada, según la estrategia de reinicio de la implementación.</li>
+</ul>
+<h2 id="jobs">Jobs</h2>
+<h3 id="comandos-3">Comandos</h3>
+<ul>
+<li><code>kubectl delete job &lt;nombre-del-job&gt;</code>: Elimina el Job y sus Pods (comportamiento en cascada).</li>
+<li><code>kubectl delete job &lt;nombre-del-job&gt; -n &lt;namespace&gt;</code>: Para un Job en un namespace específico.</li>
+<li>Si creaste el Job con un archivo YAML, usa <code>kubectl delete -f &lt;archivo.yaml&gt;</code>.</li>
+<li><code>kubectl get jobs</code>: Listar todos los Jobs.</li>
+<li><code>kubectl get jobs -n produccion</code>: Listar Jobs en un namespace específico (ej. produccion).</li>
+<li><code>kubectl get jobs --show-labels</code>: Listar Jobs y sus Pods relacionados (con más detalle).</li>
+<li><code>kubectl describe job &lt;nombre-del-job&gt;</code>: Ver detalles de un Job específico.</li>
+<li><code>kubectl get pods --selector=job-name=&lt;nombre-del-job&gt;</code>: Ver los Pods que ha creado un Job.</li>
+<li><code>kubectl logs &lt;nombre-del-pod-del-job&gt;</code>: Ver los logs de un Job (necesitas el nombre del pod).</li>
+<li>``</li>
+</ul>
+<h2 id="cronjobs">CronJobs</h2>
+<h3 id="comandos-4">Comandos</h3>
+<ul>
+<li><code>kubectl get cronjobs</code>: Listar todos los CronJobs.</li>
+<li><code>kubectl get cronjobs -n &lt;nombre-del-namespace&gt;</code>: Listar CronJobs en un namespace específico.</li>
+<li><code>kubectl describe cronjob &lt;nombre-del-cronjob&gt;</code>: Ver detalles de un CronJob.</li>
+<li><code>kubectl get jobs --selector=job-name=&lt;nombre-del-cronjob&gt;</code>: Ver los Jobs creados por un CronJob.</li>
+</ul>
+<h2 id="configmap-y-secret">ConfigMap y Secret</h2>
+<ul>
+<li>Se puede hacer dos configuraciones: Mediante variables de entorno o montando un volumen.</li>
+<li>En el deployment es donde se referencia la configuracion del configMap.</li>
+<li>Los ConfigMaps y Secrets son objetos de un Namespace. Un Pod en el namespace A no puede consumir un Secret del namespace B de forma directa.</li>
+<li>Referencia antes que ejecución: El Pod debe referenciar el nombre exacto del objeto. Si el Pod intenta arrancar y el ConfigMap/Secret referenciado no existe, el Pod quedará en estado CreateContainerConfigError.</li>
+<li>Inmutabilidad: Puedes marcar un ConfigMap/Secret como immutable: true. Esto impide cambios accidentales y mejora el rendimiento del clúster (el kubelet deja de vigilar cambios).</li>
+<li>Actualización de Variables de Entorno: Si usas variables de entorno y cambias el ConfigMap, el Pod NO verá el cambio hasta que se reinicie. Si usas volúmenes, el cambio es eventual.</li>
+</ul>
+<h3 id="comandos-5">Comandos</h3>
+<ul>
+<li><code>kubectl get configmap &lt;nombre_configMap&gt;</code>: Muestra el configMap especificado por nombre.</li>
+</ul>
+<h2 id="secret">Secret</h2>
+<ul>
+<li>En el deployment es donde se referencia la configuracion del configMap.</li>
+</ul>
+<h3 id="comandos-6">Comandos</h3>
+<ul>
+<li><code>kubectl get secret &lt;nombre_secret&gt;</code>: Muestra el secret especificado por nombre.</li>
+</ul>
+<h2 id="probes-sondas">Probes (Sondas)</h2>
+<ul>
+<li>
+<p>En Kubernetes, el Kubelet usa Probes (Sondas) para preguntarle al contenedor: &ldquo;¿Cómo estás?&rdquo;.</p>
+</li>
+<li>
+<p>LivenessProbe (Sonda de Vida) 🩺</p>
+<ul>
+<li>Pregunta: &ldquo;¿Sigues vivo o te has quedado bloqueado (deadlock)?&rdquo;</li>
+<li>Acción si falla: Kubernetes mata el contenedor y crea uno nuevo (reinicio).</li>
+<li>Uso: Para aplicaciones que se quedan &ldquo;congeladas&rdquo; pero el proceso sigue figurando como activo.</li>
+</ul>
+</li>
+<li>
+<p>ReadinessProbe (Sonda de Disponibilidad) 🚦</p>
+<ul>
+<li>Pregunta: &ldquo;¿Estás listo para recibir clientes (tráfico)?&rdquo;</li>
+<li>Acción si falla: Kubernetes no mata el contenedor, pero le dice al Service: &ldquo;Oye, no le mandes tráfico a este Pod, todavía está cargando datos o está saturado&rdquo;.</li>
+<li>Uso: Para apps que tardan en cargar una base de datos al inicio o que están temporalmente sobrecargadas.</li>
+</ul>
+</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 0001-01-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://example.org/posts/k8s/k8s/" data-title=""><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://example.org/posts/k8s/k8s/" data-title=""><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://example.org/posts/k8s/k8s/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://example.org/posts/k8s/k8s/" data-title=""><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://example.org/posts/k8s/k8s/" data-title=""><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://example.org/posts/k8s/k8s/" data-title=""><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://example.org/posts/k8s/k8s/" data-title="" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fexample.org%2fposts%2fk8s%2fk8s%2f&amp;text=" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/k8s/kind/" class="prev" rel="prev" title=""><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i></a>
+            <a href="/posts/js/js/" class="next" rel="next" title=""><i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="www.link.com" target="_blank">Fernando Velazquez</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

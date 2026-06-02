@@ -1,0 +1,130 @@
+ /* Universal selector */
+ * {
+    color: hotpink;
+  }
+
+ /*ID selector  */
+ #rad {
+    border: 1px solid blue;
+  }
+ 
+ /* Class selector */
+ .my-class {
+    color: red;
+  }
+
+ /*
+ A double colon (::) is what distinguishes a pseudo-element from a pseudo-class.
+ */
+ /* Pseudo-classes */
+ /* Our link is hovered */
+a:hover {
+    outline: 1px dotted green;
+  }
+  
+  /* Sets all even(par) paragraphs to have a different background */
+  /* even: par
+  odd: impar */
+  p:nth-child(even) {
+    background: floralwhite;
+  }
+
+  /* Pseudo-element #
+Pseudo-elements differ from pseudo-classes because instead of responding
+to the platform state, they act as if they are inserting a new element
+with CSS. Pseudo-elements are also syntactically different from 
+pseudo-classes, because instead of using a single colon (:), 
+we use a double colon (::). 
+*/
+my-element::before {
+    content: 'Prefix - ';
+  }
+  /* Your list will now either have red dots, or red numbers */
+li::marker {
+    color: red;
+  }
+
+/* This CSS looks for all elements that have an attribute of data-type
+ with a value of primary, */
+[data-type='primary'] {
+    color: red;
+  }
+
+  /* Select all tag that have this attribute presents */
+[data-type] {
+    color: red;
+  }
+  /* A href that contains "example.com" */
+[href*='example.com'] {
+    color: red;
+  }
+  
+  /* A href that starts with https */
+[href^='https'] {
+    color: green;
+  }
+  
+  /* A href that ends with .com */
+ [href$='.com'] {
+    color: blue;
+  }
+
+  /* This means that if a HTML element had a data-type attribute
+  with value Primary, instead of primary, it would not get red
+   text. You can do the opposite—case insensitivity—by using an 
+   "i" operator. */
+[data-type='primary' s] {
+    color: red;
+  }  
+
+  /* Combinators */
+/* This select all strong tag inside of p tag*/
+  p strong {
+    color: blue;
+  }
+
+  /* Next sibling(hermana, hermano) combinator #
+
+You can look for an element that immediately follows another element 
+by using a + character in your selector. */
+
+/* A child combinator (also known as direct descendant) allows you 
+more control over the recursion that comes with combinator selectors.
+By using the > character, you limit the combinator selector to apply 
+only to direct children. */
+
+/* ------------- */
+/* El selector de elementos hermanos adyacentes (+) se utiliza para
+ seleccionar un elemento que se encuentra justo al lado de otro elemento
+ en el mismo nivel de la jerarquía.
+ */
+/* Afecta a todos los elementos <p> que se ubican inmediatamente
+después de un elemento <h1> */
+ h1 + p {
+    font-size: 20px;
+    }
+
+/* Si deseas seleccionar los hermanos de un elemento, incluso si no
+ son directamente adyacentes, puedes utilizar el combinador de hermanos
+ general (~).*/
+ p ~ p {
+    font-size: 20px;
+    }
+
+ /* Selecciona solo cuando los selectores identifican elementos que
+ son hijos directos. Los elementos descendientes que se encuentran
+ más abajo en la jerarquía no se seleccionan. 
+ Selecciona los párrafos que son hijos directos del elemento 
+ <article> utilizando el operador de combinación hijo (>): */
+ article > p {
+     color: black;
+  }
+
+  /* Compound selectors #
+
+  To target <a> elements, that also have a class of 
+  .my-class, write the following. Only a element <a> with a class 
+  .my-class is affected for this rule */
+  a.my-class {
+    color: red;
+  }

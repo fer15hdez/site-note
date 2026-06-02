@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Mi Gran Novela - My New Hugo Site</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://example.org/posts/git/git/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="Mi Gran Novela">
+  <meta property="og:description" content="Git …or create a new repository on the command line
+echo “# Note” » README.md
+git init
+git add README.md
+git commit -m “first commit”
+git branch -M main
+git remote add origin https://github.com/dquijote/Note.git “origin” is the name of the url.
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/dquijote/Note.git
+git branch -M main
+git push -u origin main">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-29T15:58:26+03:00">
+    <meta property="article:modified_time" content="2026-01-29T15:58:26+08:00">
+    <meta property="article:tag" content="Novela">
+    <meta property="og:image" content="https://example.org/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://example.org/logo.png">
+  <meta name="twitter:title" content="Mi Gran Novela">
+  <meta name="twitter:description" content="Git …or create a new repository on the command line
+echo “# Note” » README.md
+git init
+git add README.md
+git commit -m “first commit”
+git branch -M main
+git remote add origin https://github.com/dquijote/Note.git “origin” is the name of the url.
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/dquijote/Note.git
+git branch -M main
+git push -u origin main">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.org/posts/git/git/" /><link rel="prev" href="https://example.org/posts/docker/" /><link rel="next" href="https://example.org/posts/aws/s3/s3/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Mi Gran Novela",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.org\/posts\/git\/git\/"
+        },"genre": "posts","keywords": "Novela","wordcount":  810 ,
+        "url": "https:\/\/example.org\/posts\/git\/git\/","datePublished": "2026-01-29T15:58:26+03:00","dateModified": "2026-01-29T15:58:26+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Fernando Velazquez"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My New Hugo Site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My New Hugo Site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Mi Gran Novela</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span>&nbsp;<span class="post-category">included in <a href="/categories/literatura/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Literatura</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-29">2026-01-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;810 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#overwrite-the-local-project-for-the-remote-project">Overwrite the local project for the remote project</a></li>
+        <li><a href="#if-want-to-backup-your-current-branch-eg-master">If want to Backup your current branch (e.g. master):</a></li>
+        <li><a href="#jump-to-the-latest-commit-on-originmaster-and-checkout-those-files">Jump to the latest commit on origin/master and checkout those files:</a></li>
+        <li><a href="#commit-history">Commit History</a></li>
+        <li><a href="#regresar-a-un-commit-rollback">Regresar a un Commit (RollBack)</a></li>
+        <li><a href="#regresar-a-un-commit-específico-descartando-cambios-posteriores">Regresar a un commit específico (descartando cambios posteriores)</a></li>
+      </ul>
+    </li>
+    <li><a href="#branch">Branch</a>
+      <ul>
+        <li><a href="#create-a-branch">Create a branch</a></li>
+        <li><a href="#jump-to-other-branch">Jump to other branch</a></li>
+        <li><a href="#cambia-la-rama-a-un-commit-especifico">Cambia la rama a un commit especifico</a></li>
+        <li><a href="#para-borrar-la-branch-local">Para borrar la branch local</a></li>
+        <li><a href="#sobreescribe-la-rama-remota-con-la-versión-local">Sobreescribe la rama remota con la versión local.</a></li>
+        <li><a href="#para-borrar-la-branch-remota">Para borrar la branch remota</a></li>
+      </ul>
+    </li>
+    <li><a href="#archivos">Archivos</a>
+      <ul>
+        <li><a href="#dejar-de-serguir-archivos">Dejar de serguir archivos</a></li>
+      </ul>
+    </li>
+    <li><a href="#proxy-en-git">Proxy en Git</a>
+      <ul>
+        <li><a href="#reset-proxy-work-without-proxy">Reset proxy, work without proxy</a></li>
+      </ul>
+    </li>
+    <li><a href="#remote">REMOTE</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="git">Git</h1>
+<p>…or create a new repository on the command line</p>
+<p>echo &ldquo;# Note&rdquo; &raquo; README.md<br>
+git init<br>
+git add README.md<br>
+git commit -m &ldquo;first commit&rdquo;<br>
+git branch -M main<br>
+git remote add origin <a href="https://github.com/dquijote/Note.git" target="_blank" rel="noopener noreffer ">https://github.com/dquijote/Note.git</a> <strong>&ldquo;origin&rdquo; is the name of the url.</strong><br>
+git push -u origin main</p>
+<p>…or push an existing repository from the command line</p>
+<p>git remote add origin <a href="https://github.com/dquijote/Note.git" target="_blank" rel="noopener noreffer ">https://github.com/dquijote/Note.git</a><br>
+git branch -M main<br>
+git push -u origin main</p>
+<p>git clone <a href="https://github.com/libgit2/libgit2" target="_blank" rel="noopener noreffer ">https://github.com/libgit2/libgit2</a> <strong>Clone the whole repository</strong><br>
+git clone <a href="https://github.com/libgit2/libgit2" target="_blank" rel="noopener noreffer ">https://github.com/libgit2/libgit2</a> name_directory <strong>Clone the whole repository in diferent directory &ldquo;name_directory&rdquo;</strong><br>
+git status #Show the status of each file<br>
+git add path_file or path_dir <strong>Tracked file. Is ready to commit to repository. If is a path_dir all file and dir will be Tracked.</strong><br>
+git reset path_file or path_dir <strong>The tracked file or dir is untracked. Delete from tracked, the file is unfollow</strong>
+git remote -v <strong>Show all the remote repository that are cloned.</strong><br>
+git fetch [remote-name] <strong>El comando irá al proyecto remoto y se traerá todos los datos que aun no tienes de dicho remoto, todo lo diferente despues de clonarlo. Pero no intenta integrar esos cambios en tus ramas locales.</strong></p>
+<p><code>git push [nombre-remoto] [nombre-rama]</code> <strong>To send the local repository to a server.</strong> <br>
+<code>git push origin master</code> <strong>That put all local repository even with the commit.</strong> <br>
+<code>git config --global user.name</code>: Muestra el nombre del usuario en la configuracion global.<br>
+<code>git config user.name</code>: Muestra el nombre de usuario configurado solo para ese proyecto (debe estar en la carpeta del proyecto).<br>
+git config &ndash;global credential.helper &lsquo;store &ndash;file ~/.my-credentials&rsquo; <strong>Store the credencial in a file. Default is ~/.my-credentials</strong> <br>
+<a href="https://user:pass@example.com" target="_blank" rel="noopener noreffer ">https://user:pass@example.com</a> <strong>Format in file credentials</strong><br>
+git config &ndash;global credential.helper &lsquo;cache &ndash;timeout [seconds]&rsquo; &ldquo;Config a credential cache. During all seconds config&rdquo;<br>
+<code>git config --list</code>: Para ver una lista completa de todas tus configuraciones (incluyendo nombre de usuario y correo electrónico).</p>
+<h3 id="overwrite-the-local-project-for-the-remote-project">Overwrite the local project for the remote project</h3>
+<p>git fetch &ndash;all # &ldquo;Dowload all file from remote but not merge&rdquo;</p>
+<h3 id="if-want-to-backup-your-current-branch-eg-master">If want to Backup your current branch (e.g. master):</h3>
+<p>git branch backup-master</p>
+<h3 id="jump-to-the-latest-commit-on-originmaster-and-checkout-those-files">Jump to the latest commit on origin/master and checkout those files:</h3>
+<p>git reset &ndash;hard origin/master &ldquo;resets the master branch to what you just fetched. The &ndash;hard option changes all the files in your working tree to match the files in origin/master.&rdquo;<br>
+git reset [<!-- raw HTML omitted -->] [<!-- raw HTML omitted -->]<br>
+This form resets the current branch head to <!-- raw HTML omitted --> and possibly updates the index (resetting it to the tree of <!-- raw HTML omitted -->) and the working tree depending on <!-- raw HTML omitted -->. If <!-- raw HTML omitted --> is omitted, defaults to &ndash;mixed. The <!-- raw HTML omitted --> must be one of the following:
+[&ndash;mixed]<br>
+Resets the index but not the working tree (i.e., the changed files are preserved but not marked for commit) and reports what has not been updated. This is the default action.
+[&ndash;soft]<br>
+Does not touch the index file or the working tree at all (but resets the head to <!-- raw HTML omitted -->, just like all modes do). This leaves all your changed files &ldquo;Changes to be committed&rdquo;, as git status would put it.<br>
+[&ndash;hard]
+Resets the index and working tree. Any changes to tracked files in the working tree since <!-- raw HTML omitted --> are discarded.</p>
+<h3 id="commit-history">Commit History</h3>
+<p><code>git log </code></p>
+<h3 id="regresar-a-un-commit-rollback">Regresar a un Commit (RollBack)</h3>
+<p><code>git checkout hash_commit</code></p>
+<h3 id="regresar-a-un-commit-específico-descartando-cambios-posteriores">Regresar a un commit específico (descartando cambios posteriores)</h3>
+<p><code>git reset --hard &lt;commit-hash&gt;</code></p>
+<h2 id="branch">Branch</h2>
+<h3 id="create-a-branch">Create a branch</h3>
+<p>git branch &lt;name_of_branch&gt;</p>
+<h3 id="jump-to-other-branch">Jump to other branch</h3>
+<p>git switch &lt;name_of_branch&gt;</p>
+<h3 id="cambia-la-rama-a-un-commit-especifico">Cambia la rama a un commit especifico</h3>
+<p><code>git reset &lt;id_commit&gt;</code><br>
+<code>git reset --hard &lt;id_commit&gt;</code>  &ldquo;La rama apunta a id_commit y olvida los commit que estan por delante&rdquo;</p>
+<h3 id="para-borrar-la-branch-local">Para borrar la branch local</h3>
+<p><code>git branch -d localBranchName</code> <strong>-d eliminará la branch únicamente si esta ha sido empujada y fusionada con la branch remota.&quot;</strong> <br>
+&ldquo;-D si deseas forzar la eliminación de una branch, incluso si aún esta no ha sido empujada o fusionada aún.&rdquo;</p>
+<h3 id="sobreescribe-la-rama-remota-con-la-versión-local">Sobreescribe la rama remota con la versión local.</h3>
+<p><code>git push --force</code></p>
+<h3 id="para-borrar-la-branch-remota">Para borrar la branch remota</h3>
+<p><code>git push origin --delete remoteBranchName</code> &ldquo;Just need to put remoteBranchName, not a like &lsquo;origen/remoteBranchName&rsquo;. Don&rsquo;t make completion of name of branch&rdquo;</p>
+<p><code>git branch -d [ name_branch]</code> &ldquo;with the -d option is to delete the branch&rdquo;<br>
+<code>git checkout [name_branch]</code> &ldquo;Switched to branch [name_branch]&rdquo; &ldquo;Updates files in the working tree to match the version in the index or the specified tree&rdquo;<br>
+<code>git branch</code> &ldquo;Show the branches and with * said which is selected&rdquo;</p>
+<h2 id="archivos">Archivos</h2>
+<h3 id="dejar-de-serguir-archivos">Dejar de serguir archivos</h3>
+<p><code>git rm --cached archivo.txt</code></p>
+<h2 id="proxy-en-git">Proxy en Git</h2>
+<p><code>git config --global http.proxy http://proxyuser:proxypwd@proxy.server.com:8080</code> &quot; this works for both http and https repos.&quot;<br>
+&ldquo;change proxyuser to your proxy user&rdquo;<br>
+&ldquo;change proxypwd to your proxy password&rdquo;<br>
+&ldquo;change proxy.server.com to the URL of your proxy server&rdquo;<br>
+&ldquo;change 8080 to the proxy port configured on your proxy server&rdquo;</p>
+<h3 id="reset-proxy-work-without-proxy">Reset proxy, work without proxy</h3>
+<p><code>git config --global --unset http.proxy</code></p>
+<h4 id="to-check-the-currently-set-proxy">to check the currently set proxy:</h4>
+<p><code>git config --global --get http.proxy</code></p>
+<h2 id="remote">REMOTE</h2>
+<p><code>git remote</code>: Muestra los nombres de cada uno de los remotos que tienes especificados.<br>
+<code>git remote -v</code>: Muestra las url de los remotos configurados.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-01-29</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://example.org/posts/git/git/" data-title="Mi Gran Novela" data-hashtags="Novela"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://example.org/posts/git/git/" data-title="Mi Gran Novela"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://example.org/posts/git/git/" data-hashtag="Novela"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://example.org/posts/git/git/" data-title="Mi Gran Novela"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://example.org/posts/git/git/" data-title="Mi Gran Novela"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://example.org/posts/git/git/" data-title="Mi Gran Novela"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://example.org/posts/git/git/" data-title="Mi Gran Novela" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fexample.org%2fposts%2fgit%2fgit%2f&amp;text=Mi%20Gran%20Novela" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/novela/">Novela</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/docker/" class="prev" rel="prev" title="DOCKER"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>DOCKER</a>
+            <a href="/posts/aws/s3/s3/" class="next" rel="next" title="Mi Gran Novela">Mi Gran Novela<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="www.link.com" target="_blank">Fernando Velazquez</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

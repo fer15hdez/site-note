@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title> - My New Hugo Site</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://example.org/posts/docker/docker/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="My New Hugo Site">
+  <meta property="og:description" content="Docker To start the project is used the command “docker-compose” in the v2 is “docker compose” Manage imges docker image --help: show all the command available.
+build: to build a image from a dockerfile : Ex. docker build -t nameImage:tag /path/dockerfile
+history: show the history of a image, how was build.
+inspect: detail and inside of a image. sudo docker image inspect IMAGE ID
+docker image ls: show all the download images.
+docker image ls -a: muestra imágenes intermedias.
+-q: para ver los números de identificación.
+prune: borrar todas las imágenes que no estés utilizando.
+docker image tag server:tagname newName/newName:latest : change the name of repository.
+docker image tag idImage newName/newName:latest : change the name of repository.
+docker image rm $(docker images --filter since=b721d1cdaac7 -q) -f: Delete the image and the intermediate images">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="og:image" content="https://example.org/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://example.org/logo.png">
+  <meta name="twitter:title" content="My New Hugo Site">
+  <meta name="twitter:description" content="Docker To start the project is used the command “docker-compose” in the v2 is “docker compose” Manage imges docker image --help: show all the command available.
+build: to build a image from a dockerfile : Ex. docker build -t nameImage:tag /path/dockerfile
+history: show the history of a image, how was build.
+inspect: detail and inside of a image. sudo docker image inspect IMAGE ID
+docker image ls: show all the download images.
+docker image ls -a: muestra imágenes intermedias.
+-q: para ver los números de identificación.
+prune: borrar todas las imágenes que no estés utilizando.
+docker image tag server:tagname newName/newName:latest : change the name of repository.
+docker image tag idImage newName/newName:latest : change the name of repository.
+docker image rm $(docker images --filter since=b721d1cdaac7 -q) -f: Delete the image and the intermediate images">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.org/posts/docker/docker/" /><link rel="prev" href="https://example.org/posts/goland/_test/" /><link rel="next" href="https://example.org/posts/django/partitioned-table-in-postgres/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.org\/posts\/docker\/docker\/"
+        },"genre": "posts","wordcount":  1114 ,
+        "url": "https:\/\/example.org\/posts\/docker\/docker\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Fernando Velazquez"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My New Hugo Site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My New Hugo Site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX"></h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="www.link.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fernando Velazquez</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1114 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#manage-imges">Manage imges</a>
+      <ul>
+        <li><a href="#descargar-una-imagen-de-un-repositorio">Descargar una imagen de un repositorio</a></li>
+        <li><a href="#comandos-básicos-con-imágenes">Comandos básicos con imágenes</a></li>
+        <li><a href="#save-images">Save images</a></li>
+      </ul>
+    </li>
+    <li><a href="#manage-container">Manage Container</a>
+      <ul>
+        <li><a href="#export-and-import">Export and Import</a></li>
+        <li><a href="#naming-container">Naming Container</a></li>
+        <li><a href="#start-stop-and-pause">Start, stop and pause</a></li>
+        <li><a href="#listar-contenedores">Listar contenedores</a></li>
+        <li><a href="#borrar-una-lista-de-contenedores">Borrar una lista de contenedores</a></li>
+        <li><a href="#copying-between-host-and-container">Copying between host and container</a></li>
+        <li><a href="#exponiendo-puertos">Exponiendo puertos</a></li>
+        <li><a href="#exponiendo-volúmenes">Exponiendo volúmenes</a></li>
+        <li><a href="#inside-to-container">Inside to container</a></li>
+        <li><a href="#delete-container">Delete container</a></li>
+        <li><a href="#conecting-container">Conecting container</a></li>
+      </ul>
+    </li>
+    <li><a href="#run-specific-image">Run Specific image</a>
+      <ul>
+        <li><a href="#postgresql">PostgreSQL</a></li>
+      </ul>
+    </li>
+    <li><a href="#dockerfile">Dockerfile</a>
+      <ul>
+        <li><a href="#executing-multiple-command">Executing multiple command</a></li>
+      </ul>
+    </li>
+    <li><a href="#volume">VOLUME</a></li>
+    <li><a href="#docker-compose">Docker Compose</a>
+      <ul>
+        <li><a href="#the-file-yml">The file .yml</a></li>
+        <li><a href="#basic-command">Basic command</a></li>
+      </ul>
+    </li>
+    <li><a href="#redes">Redes</a>
+      <ul>
+        <li><a href="#tipos-de-controladores-de-red-en-docker">Tipos de controladores de red en Docker</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="docker">Docker</h1>
+<ul>
+<li>To start the project is used the command &ldquo;docker-compose&rdquo; in the v2 is &ldquo;docker compose&rdquo;</li>
+</ul>
+<h2 id="manage-imges">Manage imges</h2>
+<p><code>docker image --help</code>: show all the command available.<br>
+<code>build:</code> to build a image from a <em><strong>dockerfile</strong></em>  : Ex. docker build -t nameImage:tag /path/dockerfile<br>
+<code>history</code>: show the history of a image, how was build.<br>
+<code>inspect</code>: detail and inside of a image. <code>sudo docker image inspect IMAGE ID</code><br>
+<code>docker image ls</code>: show all the download images.<br>
+<code>docker image ls -a</code>: muestra imágenes intermedias.<br>
+<code>-q</code>: para ver los números de identificación.<br>
+<code>prune</code>:  borrar todas las imágenes que no estés utilizando.<br>
+<code>docker image tag</code> <strong>server:tagname</strong> <code>newName/newName:latest</code> :  change the name of repository.<br>
+<code>docker image tag</code> <strong>idImage</strong> <code>newName/newName:latest</code> :   change the name of repository.<br>
+<code>docker image rm $(docker images --filter since=b721d1cdaac7 -q) -f</code>: Delete the image and the intermediate images</p>
+<h3 id="descargar-una-imagen-de-un-repositorio">Descargar una imagen de un repositorio</h3>
+<p><code>pull</code>: download images from a repository. Ex: <code>docker image pull ubuntu</code>.<br>
+<code>docker image pull ubuntu:xenial</code>: a specific version.<br>
+<code>docker pull nameUser/nameImage</code>: son imagenes de usuarios.<br>
+<code>push</code>: upload a image to a repository.</p>
+<p><code>docker rmi &lt;nombre de la imagen&gt;</code>: to remove image. <br>
+<code>docker rmi &lt;nombre_imagen&gt; &lt;nombre_imagen&gt; &lt;nombre_imagen&gt; ...</code>: elimianr varias imagenes. Puede ser con el ID o el nombre.<br>
+<code>rm</code>:  to remove container.</p>
+<h3 id="comandos-básicos-con-imágenes">Comandos básicos con imágenes</h3>
+<p><code>ls</code>: para saber las imágenes que tienes en tu equipo.</p>
+<h3 id="save-images">Save images</h3>
+<p><code>sudo docker save nameImage | gzip &gt; /path/nameImage.tar.gz</code><br>
+<code>sudo docker load  &lt; ruta/nombrecontainercomprimido.tar</code><br>
+<code>sudo docker load -i  nameContainerOrImage.tar.gz</code></p>
+<hr>
+<h2 id="manage-container">Manage Container</h2>
+<p><code>docker container --help</code><br>
+<code>docker run atareao/hola</code>: create and start a container.<br>
+<code>docker ps</code>: show all the container.<br>
+<code>docker container ls</code>: show all the container.<br>
+<code>docker ps -a</code>: show all the container, even stoped.<br>
+<em>Los contenedores se ejecutan solo mientras se ejecuta su comando predeterminado</em>
+<em>(<strong>Mantiene ejecutandose el contenedor</strong>)Para iniciar una sesión pseudo-TTY con el contenedor, podemos usar el indicador <strong>-t</strong> . El contenedor no saldrá hasta que finalice la sesión.</em></p>
+<h3 id="export-and-import">Export and Import</h3>
+<p><em>docker export [CONTAINER ID] &gt; /home/export.tar</em> : Export
+<em>cat /home/export.tar | docker import - some-name:latest</em>: Import</p>
+<h3 id="naming-container">Naming Container</h3>
+<p><code>docker run -d --name myContainer atareao/hola</code> : Create a container. <br>
+Si intentas llamar a dos contenedores por el mismo nombre, como te puedes imaginar, se producirá un error, y no iniciará el segundo contenedor.</p>
+<p><code>docker container rename ID newName</code>: rename a container.<br>
+<em>sleep 100</em> : stay the container runing. Puting in end of line. Ex: <em>docker run atareao/hola sleep 5</em><br>
+<em>-e</em>: allows passing environment variables.<br>
+<em>&ndash;rm</em>: delete the container when it is stoped.<br>
+<em>&ndash;network [nameOfNetwork]</em>: define a que red va a pertenecer</p>
+<h3 id="start-stop-and-pause">Start, stop and pause</h3>
+<p><code>docker start IDcontainer</code>:  run a previously created container.<br>
+<code>docker stop IDcontainer</code>:<br>
+<code>docker restart 1e0e92b8255e</code>:<br>
+<code>docker pause 1e0e92b8255e</code>:<br>
+<code>docker unpause 1e0e92b8255e</code>:</p>
+<p><code>*-d</code> : ejecuta el container en 2do plano.</p>
+<h3 id="listar-contenedores">Listar contenedores</h3>
+<p><em>Filtrados por estado</em>
+<code>docker ps -a -f status=exited</code></p>
+<h3 id="borrar-una-lista-de-contenedores">Borrar una lista de contenedores</h3>
+<p><code>docker rm $(docker ps -a -f status=exited -q)</code> : The param -q give the list to be raise.</p>
+<h3 id="copying-between-host-and-container">Copying between host and container</h3>
+<p><code>docker cp archivo.txt midocker:/toDir</code><br>
+<code>docker cp midocker:archivo2.txt /toDirInHost</code></p>
+<h3 id="exponiendo-puertos">Exponiendo puertos</h3>
+<p><code>docker run -d -it --name test01 -p 81:80 nginx:alpine</code>: option <code>-p</code> when [host port]:.[contianer port]. <code>-it</code> option to run container and iteract in the terminal.</p>
+<h3 id="exponiendo-volúmenes">Exponiendo volúmenes</h3>
+<p><code>-v</code>: ex. <code>docker run -d -p  80:80 -p 443:443 -v &quot;$(pwd)&quot;/dir/host:/dir/of/docker --name nameContainer atareao/imageDocker</code><br>
+<em>Nota</em> : Para evitar problemas con <strong>permisos</strong> el dir del host se debe crear antes de iniciar el contenedor, sino docker crea el dir con permisos root.</p>
+<h3 id="inside-to-container">Inside to container</h3>
+<p><code>docker exec -it midocker bash</code>: permite trabajar desde la terminal en el container.<br>
+<code>exit</code>: salir del container.</p>
+<h3 id="delete-container">Delete container</h3>
+<p><code>docker rm midocker</code>: Delete one by one.<br>
+<code>docker container prune</code>: Delete all stopped container.</p>
+<h3 id="conecting-container">Conecting container</h3>
+<p><code>*--link,</code> añade una nueva entrada en el <code>/etc/hosts</code> que apunta al IP del contenedor identficado por <code>--link=CONTAINER_NAME</code>.</p>
+<h2 id="run-specific-image">Run Specific image</h2>
+<h3 id="postgresql">PostgreSQL</h3>
+<p><code>docker run -d --name postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 postgres</code></p>
+<hr>
+<h2 id="dockerfile">Dockerfile</h2>
+<ol>
+<li><code>ADD</code> copia un archivo del host al contenedor.</li>
+<li><code>CMD</code> el agumento que pasas por defecto.</li>
+<li><code>ENTRYPOINT</code> el comando que se ejecuta por defecto al arrancar el contenedor.</li>
+<li><code>ENV</code> permite declarar una variable de entorno en el contenedor.</li>
+<li><code>EXPOSE</code> abre un puerto del contenedor. Ex. <em>EXPOSE 8080</em>  or <em>EXPOSE 8080/udp</em></li>
+<li><code>FROM</code> indica la imagen base que utilizarás para construir tu imagen personalizada. Esta opción es obligatoria, y además debe ser la primera instrucción del <em><strong>Dockerfile</strong></em>.</li>
+<li><code>MAINTAINER</code> es una valor opcional que te permite indicar quien es el que se encarga de mantener el <em><strong>Dockerfile</strong></em>.</li>
+<li><code>ONBUILD</code> te permite indicar un comando que se ejecutará cuando tu imagen sea utilizada para crear otra imagen.</li>
+<li><code>RUN</code> ejecuta un comando y guarda el resultado como una nueva capa.</li>
+<li><code>USER</code> define el usuario por defecto del contenedor.</li>
+<li><code>VOLUME</code> crea un volumen que es compartido por los diferentes contenedores o con el <em>host</em>.</li>
+<li><code>WORKDIR</code> define el directorio de trabajo para el contenedor.</li>
+</ol>
+<p><em>Syntax</em> : docker build [OPTIONS] PATH | URL | -<br>
+<em>Exmaple</em> :  <code>docker build -t tagName:latest .</code> (The dot is the path. It look for a Dockerfile file. It is posible define different path or link)</p>
+<h3 id="executing-multiple-command">Executing multiple command</h3>
+<p><code>ENTRYPOINT [&quot;bash&quot;, &quot;./migrate.sh&quot;]</code> (This command launches a Bash shell and executes the script in the &ldquo;migrate.sh&rdquo; file line by line.)</p>
+<hr>
+<h2 id="volume">VOLUME</h2>
+<p><code>docker volume create mi_volumen</code>: Crear un volumen<br>
+<code>docker volume ls</code>: Listar volumen<br>
+<code>docker volume inspect mi_volumen</code> : Inspeccionar un volumen<br>
+<code>docker volume rm mi_volumen</code>: Eliminar un volumen<br>
+<code>docker volume prune</code>: Eliminar todos los volúmenes no usados</p>
+<hr>
+<h2 id="docker-compose">Docker Compose</h2>
+<h3 id="the-file-yml">The file .yml</h3>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-yml">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container1</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">atareao/chiquito:composer</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="s2">&#34;5000:5000&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container2</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">mariadb</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="s2">&#34;3306:3306&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="l">./data:/var/lib/mysql</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l">password </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span></span></span></code></pre></div></div>
+<p><strong>volume</strong> : volume_name:/path/in/container</p>
+<h3 id="basic-command">Basic command</h3>
+<p><code>docker-compose up</code>: levanta los contenedores.<br>
+<code>docker-composer up -d</code>: hace lo mismo que la instrucción pero en modo desvinculado, detached mode.<br>
+<code>docker-compose ps</code>: te permite ver los contenedores que están en funcionamiento.<br>
+<code>docker compose stop</code>: es la herramienta encargada de detener los diferentes contenedores.<br>
+<code>docker-composer down</code>: detiene los contenedores.</p>
+<hr>
+<h2 id="redes">Redes</h2>
+<p>Ex.: <code>docker network ls</code><br>
+<code>docker network inspect bridge</code><br>
+<code>docker network create --driver bridge red1</code><br>
+<code>docker network connect red1 nameContainer</code></p>
+<p><code>connect</code>: te permitirá conectar un contenedore a un red.<br>
+<code>disconnect</code>: desconecta un contenedor de una red.<br>
+<code>create</code>: es el comando que debes utilizar para crear una red.<br>
+<code>inspect</code>: te permite obtener información detallada de una red.<br>
+<code>ls</code>: es el comando a utilizar para ver las redes que tienes.<br>
+<code>prune</code>: es el comando con el que borrará todas las redes que no estés utilizando.<br>
+<code>rm</code>: te permite borrar una o mas redes.</p>
+<h3 id="tipos-de-controladores-de-red-en-docker">Tipos de controladores de red en Docker</h3>
+<p><strong>driver:</strong> este es el controlador por defecto. Es la mejor solución para conectar contenedores que se encuentran corriendo en el mismo anfitrión.<br>
+<strong>host:</strong> este tipo de controlador elimina el aislamiento entre el contenedor y el anfitrión.<br>
+<strong>overlay:</strong> Permite conectar diferentes contenedores en diferentes nodos.<br>
+<strong>macvila:</strong> permite asingar una dirección MAC a un contenedor.<br>
+<strong>none:</strong> inhabilita todas las redes.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 0001-01-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://example.org/posts/docker/docker/" data-title=""><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://example.org/posts/docker/docker/" data-title=""><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://example.org/posts/docker/docker/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://example.org/posts/docker/docker/" data-title=""><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://example.org/posts/docker/docker/" data-title=""><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://example.org/posts/docker/docker/" data-title=""><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://example.org/posts/docker/docker/" data-title="" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fexample.org%2fposts%2fdocker%2fdocker%2f&amp;text=" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/goland/_test/" class="prev" rel="prev" title=""><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i></a>
+            <a href="/posts/django/partitioned-table-in-postgres/" class="next" rel="next" title=""><i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="www.link.com" target="_blank">Fernando Velazquez</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>
