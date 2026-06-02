@@ -29,6 +29,16 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
+      # Descarga el otro repositorio (Repositorio Note)
+      - name: Checkout Repo Note
+        uses: actions/checkout@v6
+        with:
+          repository: 'fer15hdez/Note'
+          path: Note-repo    # Se guarda en la carpeta 'otro-repo'    
+      - name: Copiar archivos para content
+        run: |
+          ls -la Note-repo          
+          cp Note-repo/* content/posts
       - name: Setup Go
         uses: actions/setup-go@v6
         with:
