@@ -38,7 +38,7 @@ jobs:
       - name: Copiar archivos para content
         run: |
           ls -la Note-repo          
-          cp Note-repo/* content/posts
+          cp -r Note-repo/* content/posts
       - name: Setup Go
         uses: actions/setup-go@v6
         with:
