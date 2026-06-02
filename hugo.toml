@@ -70,9 +70,9 @@ languageName = "English"
   # LoveIt NEW | 0.2.0 date format
   dateFormat = "2006-01-02"
   # website title for Open Graph and Twitter Cards
-  title = "My cool site"
+  title = "My personal note"
   # website description for RSS, SEO, Open Graph and Twitter Cards
-  description = "This is my cool site"
+  description = "This are my personal note"
   # website images for Open Graph and Twitter Cards
   images = ["/logo.png"]
 
