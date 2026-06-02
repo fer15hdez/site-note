@@ -1,2 +1,0 @@
-2. "pidof gvfsd-smb-browse"
-3. "kill $PID" from above (regular kill, not -9) 
