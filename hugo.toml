@@ -50,15 +50,7 @@ languageName = "English"
     name = "Categories"
     url = "/categories/"
     title = ""
-
-  [[menu.main]]
-    weight = 4
-    identifier = ""
-    pre = ""
-    post = ""
-    name = "Linux"
-    url = "/post/Linux/"
-    title = ""  
+ 
 
 [taxonomies]
   category = "categories"
