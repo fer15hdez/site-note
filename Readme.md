@@ -1,1 +1,1 @@
-Renderizado del repositorio note
+Renderizado del repositorio note.
